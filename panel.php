@@ -8,7 +8,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>PANEL PAGE</title>
+    <title>Panel Page</title>
     <link rel="stylesheet" href="main/css/bootstrap-responsive.css">
     <style>
 
