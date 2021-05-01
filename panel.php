@@ -33,14 +33,8 @@
      <div class="header">
        <h2>Welcome to ABC panel - <?php echo($_SESSION['adminloginid']) ?></h2>
        <form class="" method="POST">
-         <button type="button" name="logout">LOG OUT</button>
+         <a href="index.php"><button type="button" name="logout">LOG OUT</button></a>
        </form>
      </div>
-     <?php
-      if (isset($_POST['logout'])) {
-        session_destroy();
-        header("location: admin_login.php");
-      }
-      ?>
   </body>
 </html>
