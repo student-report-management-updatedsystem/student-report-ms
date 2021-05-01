@@ -42,8 +42,8 @@
          <div class="close">+</div>
           <img class="pic_2" src="images/pic_2.png" alt="">
           <form method="POST">
-            <input type="text" placeholder="Name" >
-            <input type="password" placeholder="PassWord">
+            <input type="text" placeholder="Name" name="AdminName" >
+            <input type="password" placeholder="PassWord" name="AdminPassword">
             <button type="submit" name="SignIn">Sign In</button>
           </form>
        </div>
