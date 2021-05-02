@@ -25,9 +25,6 @@
              <h1 class="heading">Welcome to <span>ABC PVT</span></h1>
              <h1 class="heading">SCHOOL</h1>
              <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h6>
-             <div class="btn-3">
-               <a href="admin_login.php"><button type="button" class="btn-2" name="button">Login</button></a>
-             </div>
           </div>
           <div class="col-lg-6">
             <img src="images/homepage_img.png" class="image" alt="">
@@ -44,7 +41,7 @@
           <form method="POST">
             <input type="text" placeholder="Name" name="AdminName" >
             <input type="password" placeholder="PassWord" name="AdminPassword">
-            <button type="submit" name="SignIn">Sign In</button>
+            <button type="submit" class="button" name="SignIn">Sign In</button>
           </form>
        </div>
      </div>
