@@ -44,7 +44,7 @@
           <form method="POST">
             <input type="text" placeholder="Name" name="AdminName" >
             <input type="password" placeholder="PassWord" name="AdminPassword">
-            <button type="submit" name="SignIn">Sign In</button>
+            <button type="submit" class="button" name="SignIn">Sign In</button>
           </form>
        </div>
      </div>
