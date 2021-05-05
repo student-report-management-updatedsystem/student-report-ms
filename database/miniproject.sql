@@ -31,3 +31,9 @@ INSERT INTO `student` (`id`, `student_id`, `name`, `last_name`, `report`, `yoa`,
 
 ALTER TABLE `student`
   ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `student`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
