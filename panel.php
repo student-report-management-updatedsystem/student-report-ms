@@ -1,9 +1,4 @@
-<?php
- session_start();
- if(!isset($_SESSION['adminloginid'])){
-   header("location: admin-login.php");
- }
-?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>

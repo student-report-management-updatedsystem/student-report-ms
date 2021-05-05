@@ -1,5 +1,18 @@
 <?php
  require("connection.php");
+ $db=mysqli_select_db($conn,'miniproject');
+ if(isset($_POST['SignIn'])){
+   $useradmin=$_POST['AdminName'];
+   $passwordadmin=$_POST['AdminPassword'];
+   $sql= "select * from user where username='$useradmin' and password='$passwordadmin' ";
+   $query= mysqli_query($conn,$sql);
+   if(mysqli_num_rows($query)==1){
+      header('location: panel.php');
+   }
+   else{
+       echo "wrong input";
+   }
+ }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -138,21 +151,5 @@ few seconds.</p>
          document.querySelector('.bg-modal').style.display = "none";
        });
      </script>
-     <?php
-     if (isset($_POST['SignIn']))
-        {
-          $query = "SELECT * FROM `user` WHERE 'username'='$_POST[AdminName]' AND 'password'='$_POST[AdminPassword]'";
-          $result = mysqli_query($conn,$query);
-          if(mysqli_num_rows($result)==1)
-          {
-            session_start();
-            $_SESSION['adminloginid']=$_POST['AdminName'];
-            header("location: panel.php");
-          }
-          else{
-            echo"<script>alert('Incorrect Password');</script>";
-          }
-        }
-      ?>
   </body>
 </html>
