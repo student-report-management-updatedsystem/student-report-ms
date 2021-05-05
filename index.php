@@ -20,12 +20,12 @@
   <body>
     <section id="homepage">
       <div class="container">
-        <nav class="navbar">
-          <h5 class="navbar-brand">ABC</h5>
-          <ul class="navbar-nav ml-auto">
-            <button type="button" id="button" class="button btn-1">Login</button>
-          </ul>
-        </nav>
+          <nav class="navbar">
+             <h5 class="navbar-brand">ABC</h5>
+                 <ul class="navbar-nav ml-auto">
+                   <button type="button" id="button" class="button btn-1">Login</button>
+                 </ul>
+          </nav>
         <div class="row">
           <div class="col-lg-6">
              <h1 class="heading">Welcome To <span>ABC PVT</span></h1>
@@ -53,25 +53,56 @@
         </div>
       </div>
   </section>
-  <footer>
-    <div class="row">
-      <div class="col-lg-6 f-c-4">
-        <h5 class="f-p-1"><i class="las la-university"></i>Student Report Management System</h5>
-        <p class="f-p">Lorem ipsum dolor sit amet
-          <p class="f-p">consectetur adipiscing elit</p>
-          <p class="f-p">labore et dolore magna aliqua</p>
-          <p class="f-p">sed do eiusmod tempor incididunt ut</p>
+  <section id="features">
+    <h2 class="feature-head">Features</h2>
+    <div class="container-2">
+      <div class="box b-1">
+        <div class="icon">
+          <img class="i-1" src="https://img.icons8.com/wired/64/000000/students.png"/>
+        </div>
+        <div class="content">
+          <h3>View Student</h3>
+          <p class="feature-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+        </div>
       </div>
-      <div class="col-lg-6">
-        <div class="footer-content">
-          <h5 class="f-c-1">Project Done By </h5>
-          <p class="f-c-2"><i class="las la-female" ></i>Anju Suresh</p>
-          <p class="f-c-2"><i class="las la-female"></i>E Anjali Shankar</p>
-          <p class="f-c-2"><i class="las la-male"></i>Adarsh S Kumar</p>
-          <p class="f-c-2"><i class="las la-female"></i>Arya Suresh</p>
+      <div class="box b-2">
+        <div class="icon">
+          <img class="i-1" src="https://img.icons8.com/dotty/80/000000/student-registration.png"/>
+        </div>
+        <div class="content">
+          <h3>Add Student</h3>
+          <p class="feature-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+        </div>
+      </div>
+      <div class="box b-3">
+        <div class="icon">
+          <img class="i-1" src="https://img.icons8.com/wired/64/000000/remove-user-male.png"/>
+        </div>
+        <div class="content">
+          <h3>Delete Student</h3>
+          <p class="feature-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
         </div>
       </div>
     </div>
+  </section>
+  <footer>
+        <div class="footer-content">
+          <h5 class="f-c-1">Project Done By </h5>
+          <div class="row">
+            <div class="col-lg-3 l-1">
+              <p class="f-c-2"><i class="las la-female la-32px" ></i>Anju Suresh</p>
+            </div>
+            <div class="col-lg-3 l-2">
+              <p class="f-c-2"><i class="las la-female"></i>E Anjali Shankar</p>
+            </div>
+            <div class="col-lg-3 l-3">
+              <p class="f-c-2"><i class="las la-male"></i>Adarsh S Kumar</p>
+            </div>
+            <div class="col-lg-3 l-4">
+              <p class="f-c-2"><i class="las la-female"></i>Arya Suresh</p>
+            </div>
+          </div>
+        </div>
   </footer>
     <!-- modal section -->
      <div class="bg-modal">
@@ -80,7 +111,7 @@
           <img class="pic_2" src="images/pic_2.png" alt="">
           <form method="POST">
             <input type="text" placeholder="Name" name="AdminName" >
-            <input type="password" placeholder="PassWord" name="AdminPassword">
+            <input type="password" placeholder="Password" name="AdminPassword">
             <button type="submit" class="button" name="SignIn">Sign In</button>
           </form>
        </div>

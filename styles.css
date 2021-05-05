@@ -11,6 +11,10 @@
   height: 100%;
   background-size: cover;
 }
+.nav-item{
+  text-decoration: none;
+  color: white;
+}
 .heading{
   font-family: 'Roboto', sans-serif;
   font-size: 4rem;
@@ -145,7 +149,6 @@ input
   padding-left: 8%;
   padding-right: 9%;
   padding-top: 5%;
-  padding-bottom: 1%;
   text-align: center;
 }
 .h{
@@ -185,45 +188,6 @@ input
   font-size: 0.8rem;
   padding-top: 10px;
 }
-#features
-{
-  background: #eeeeee;
-  background-size: cover;
-  height: 100%;
-}
-.feature-1
-{
-  text-align: center;
-  padding-bottom: 20px;
-
-}
-.c-1{
-  padding-right: 10%;
-}
-.c-2
-{
-  padding-left: 10%;
-}
-.card{
-  padding-right: 5px;
-  padding-left: 5px;
-  box-shadow: 1px 1px  #cdd0cb;
-}
-.card-body{
-  padding-left: 7px;
-  padding-top: 25px;
-  padding-right: 5px;
-}
-.card-text
-{
-  padding-top: 10px;
-  padding-bottom: 8px;
-  font-size: 0.9rem;
-  opacity: 0.6;
-}
-.card-title{
-  padding-top: 15px;
-}
 .h-3{
   padding-top: 3%;
   padding-bottom: 15px;
@@ -236,7 +200,7 @@ input
 }
 footer{
   background: #222831;
-  height: 400px;
+  height: 280px;
 }
 .f-p-1
 {
@@ -253,13 +217,14 @@ footer{
 }
 .footer-content{
   padding-left: 1px;
-  padding-top: 43px;
 }
 .f-c-1
 {
   font-family: 'Noto Sans JP',sans-serif;
   color: #e84a5f;
   padding-right: 5px;
+  text-align: center;
+  padding-top: 60px;
 }
 .f-c-2
 {
@@ -272,4 +237,165 @@ footer{
 }
 .f-p-1, .f-p{
   padding-left: 80px;
+}
+.feature{
+  font-size: 0.9rem;
+  color: grey;
+  text-align: center;
+  padding-top: 3%;
+}
+.feature-img{
+  padding-bottom: 25px;
+}
+.feature-name{
+  padding-top: 1rem;
+}
+.feature-content{
+  opacity: 0.6;
+}
+#features{
+  font-family: 'Poppins', sans-serif;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 180px;
+  background: #f3f4ed;
+}
+.container-2
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container-2 .box{
+  position: relative;
+  width: 300px;
+  padding: 35px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+}
+.container-2 .box .icon{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  font-size: 40px;
+  font-weight: 700;
+  transition: 1s;
+}
+.container-2 .box:nth-child(1) .icon{
+  box-shadow: 0 0 0 0 #f05454;
+  background: #f05454;
+}
+.container-2 .box:nth-child(1):hover .icon{
+  box-shadow: 0 0 0 400px #f05454;
+}
+.container-2 .box:nth-child(2) .icon{
+  box-shadow: 0 0 0 0 #3edbf0;
+  background: #3edbf0;
+}
+.container-2 .box:nth-child(2):hover .icon{
+  box-shadow: 0 0 0 400px #3edbf0;
+
+}
+.container-2 .box:nth-child(3) .icon{
+  box-shadow: 0 0 0 0 #f3c623;
+  background: #f3c623;
+}
+.container-2 .box:nth-child(3):hover .icon{
+  box-shadow: 0 0 0 400px #f3c623;
+}
+.container-2 .box .content{
+  position: relative;
+  z-index: 1;
+  transition: 0.5s;
+  color:
+}
+.container-2 .box:hover .content{
+  color: #fff;
+}
+.container-2 .box .content h3{
+  font-size: 20px;
+  margin: 10x 0;
+  padding: 0;
+}
+.container-2 .box .content p{
+  margin: 0;
+  padding: 0;
+}
+.container-2 .box:before{
+  content: '';
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,.2);
+  z-index: 2;
+  pointer-events: none;
+}
+.i-1
+{
+  width: 50px;
+}
+.b-1
+{
+  margin-left: 150px;
+  margin-right: 0;
+}
+.b-2
+{
+  margin-left: 0;
+  margin-right: 0;
+}
+.b-3
+{
+  margin-right: 150px;
+  margin-left: 0;
+}
+.nav-link{
+  color: white;
+  text-decoration: none;
+}
+.feature-head{
+  color: #222831;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 3.2rem;
+  text-align: center;
+  padding-top: 100px;
+  opacity: 0.8;
+}
+.n{
+  text-align: right;
+}
+.l-1{
+  padding-left: 160px;
+  padding-right: 0;
+  text-align: right;
+}
+.l-2{
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+.l-3{
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+.l-4{
+  padding-left: 0;
+  padding-right: 190px;
+  text-align: left;
 }
