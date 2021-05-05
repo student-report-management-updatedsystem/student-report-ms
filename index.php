@@ -30,7 +30,11 @@
           <div class="col-lg-6">
              <h1 class="heading">Welcome To <span>ABC PVT</span></h1>
              <h1 class="heading">SCHOOL</h1>
-             <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h6>
+             <h6>You are welcome to the ABC School's student report management system.
+               This is a software solution designed to help schools track and manage all their student data – everything from thier admission year, student id, profile and more.
+               Since student play a major part of an institution, this system will help the institution to keep track of all the students details in one stretch.
+               This will also reduce the involvement of many pen paper work. If you want to get details of any student,
+             it can be searched up within minutes rather than looking upon huge heap of files.</h6>
           </div>
           <div class="col-lg-6">
             <img src="images/homepage_img.png" class="image" alt="">
@@ -40,7 +44,7 @@
     </section>
     <section id="about-project">
       <h1 class="h" >About Project</h1>
-      <h4 class="h-1">Lorem ipsum dolor sit amet</h4>
+      <h4 class="h-1">school report management system</h4>
       <div class="row r-1">
         <div class="col-lg-6 pic_3">
           <img src="images/pic_3.png" alt="">
@@ -48,7 +52,17 @@
         <div class="col-lg-6 about">
           <h3 class="h-2">Our Vision</h3>
           <div class="p-2">
-            <p class="p-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="p-1">This system provides us a simple
+interface for maintainance of student information.It can be used by educational
+institutes or colleges to maintain the records of students easily. Throughout the project the focus has been on presenting information in an easy and
+intelligible manner.The system provides facilitiies to create profiles of students
+thus reducing paperwork and automating the record genreration process in an
+educational institution.The vision of Student information System is to allow the administrator of
+any organization to edit and find out the personal details of a student and
+allows the student to keep up to date his profile .It’ll also facilitate keeping all
+the records of students, such as their id, name, year of admission, phone
+number, DOB etc. So all the information about an student will be available in a
+few seconds.</p>
           </div>
         </div>
       </div>
