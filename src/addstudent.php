@@ -74,15 +74,7 @@ input[type=text], input[type=password],input[ type  ="tel"],input[ type  ="date"
 
 <table align="center">
 
-  <tr align="left">
-    <th>
-          <label for="student_id">STUDENT ID</label>
-    </th>
-    <th></th>
-    <th>
-          <input type="text" style="width:265px; height:30px;" placeholder="eg:1243abc" value="" name="student_id"Required /><br>
-    </th>
-  </tr>
+
 
   <tr align="left">
     <th>
@@ -193,7 +185,6 @@ input[type=text], input[type=password],input[ type  ="tel"],input[ type  ="date"
 include 'auth.php';
 
 if(isset($_POST['savestudent'])){
-  $student_id=$_POST['student_id'];
     $fname=$_POST['fname'];
     $lname=$_POST['lname'];
     $report=$_POST['report'];
@@ -203,8 +194,8 @@ if(isset($_POST['savestudent'])){
     $gender=$_POST['gender'];
     $img=$_POST['img'];
 
-    $insertquery="insert into student(`student_id`,`name`, `last_name`, `report`, `yoa`, `parent`, `dob`, `gender`, `file`)
-    VALUES ('$student_id','$fname','$lname','$report','$yoa','$phone','$dob','$gender','$img')";
+    $insertquery="insert into student(`name`, `last_name`, `report`, `yoa`, `parent`, `dob`, `gender`, `file`)
+    VALUES ('$fname','$lname','$report','$yoa','$phone','$dob','$gender','$img')";
 
 mysqli_query($conn,$insertquery);
 
