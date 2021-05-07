@@ -2,7 +2,7 @@
 <html>
 <head>
   <style>
-  *{margin: 0;padding: 0;box-sizing :border-box; font-family:'arial'};
+  *{margin: 0;padding: 0;box-sizing :border-box;font-family: 'Poppins', sans-serif;};
 
   .main-div
   {
@@ -14,14 +14,6 @@
     align-items:center;
   }
 
-  .center-div
-  {
-    width:90%;
-    height:80vh;
-    padding: 20px 0 0 0;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,.03);
-    border-radius:10px;
-  }
 
   h1
   {
@@ -39,6 +31,7 @@
     box-shadow: 0 10px 20px 0 rgba(0,0,0,.03);
     border-radius: 10px;
     margin : auto;
+    width:30%;
   }
 
   th,td
@@ -52,7 +45,10 @@
   {
     text-transform: uppercase;
     font-weight: 500;
+    background: #222831;
+    color:white;
   }
+  tr:hover {background-color: #f5f5f5;}
  td
  {
    font-size: 13px;
@@ -77,5 +73,6 @@
    justify-content: center;
  }
 </style>
+
 </head>
 </html>
