@@ -74,6 +74,16 @@ input[type=text], input[type=password],input[ type  ="tel"],input[ type  ="date"
 
 <table align="center">
 
+  <tr align="left">
+    <th>
+         <label for="fname">STUDENT ID</label>
+    </th>
+    <th></th>
+    <th>
+        <input type="text" style="width:265px; height:30px;" placeholder="studentid" id="stdid"
+        value="AS01-<?php $prefix= md5(rand(1,10)); echo strip_tags(substr($prefix ,0,4));?>" name="stdid" Required /><br>
+    </th>
+  </tr>
 
 
   <tr align="left">
