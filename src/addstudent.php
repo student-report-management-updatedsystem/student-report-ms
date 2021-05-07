@@ -195,6 +195,7 @@ input[type=text], input[type=password],input[ type  ="tel"],input[ type  ="date"
 include 'auth.php';
 
 if(isset($_POST['savestudent'])){
+    $stdid=$_POST['stdid'];
     $fname=$_POST['fname'];
     $lname=$_POST['lname'];
     $report=$_POST['report'];
@@ -204,8 +205,8 @@ if(isset($_POST['savestudent'])){
     $gender=$_POST['gender'];
     $img=$_POST['img'];
 
-    $insertquery="insert into student(`name`, `last_name`, `report`, `yoa`, `parent`, `dob`, `gender`, `file`)
-    VALUES ('$fname','$lname','$report','$yoa','$phone','$dob','$gender','$img')";
+    $insertquery="insert into student(`student_id`, `name`, `last_name`, `report`, `yoa`, `parent`, `dob`, `gender`, `file`)
+    VALUES ('$stdid', '$fname','$lname','$report','$yoa','$phone','$dob','$gender','$img')";
 
 mysqli_query($conn,$insertquery);
 
