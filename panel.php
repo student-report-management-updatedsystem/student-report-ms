@@ -11,13 +11,13 @@
 
       <div class="sidebar">
         <div class="sidebar-brand">
-          <h2><span class="lab la-accusoft"></span> ABC School </h2>
+          <h2><span class="lab la-accusoft"></span> ABC School</h2>
         </div>
 
         <div class="sidebar-menu">
           <ul>
             <li>
-              <a href=""><span class="las la-school"></span>
+              <a href="" class="active"><span class="las la-school"></span>
                 <span>Dashboard</span></a>
             </li>
             <li>
@@ -54,7 +54,7 @@
            <div class="user-wrapper">
              <img src="https://img.icons8.com/pastel-glyph/64/000000/user-male--v1.png" width="40px" height="40px"/>
              <div>
-               <h4>John Doe</h4>
+               <h4>Arya Anju Anjali Adarsh</h4>
                <small>Super Admin</small>
              </div>
            </div>
@@ -64,7 +64,7 @@
             <div class="cards">
               <div class="card-single">
                 <div>
-                  <h1>54</h1>
+                  <a href="src/viewstudenttable.php"><h1>View</h1></a>
                   <span>Students</span>
                 </div>
                 <div>
@@ -73,8 +73,8 @@
               </div>
               <div class="card-single">
                 <div>
-                  <h1>79</h1>
-                  <span>Add Students</span>
+                  <a href="src/addstudent.php" style="color: black;"><h1>Add</h1></a>
+                  <span>Students</span>
                 </div>
                 <div>
                   <span class="las la-graduation-cap"></span>
@@ -82,14 +82,15 @@
               </div>
               <div class="card-single">
                 <div>
-                  <h1>124</h1>
-                  <span>Delete Students</span>
+                  <a href="index.php" style="color:black;"><h1>Logout</h1></a>
+                  <span>Students</span>
                 </div>
                 <div>
                   <span class="las la-user-minus"></span>
                 </div>
               </div>
             </div>
+
          </main>
       </div>
 
