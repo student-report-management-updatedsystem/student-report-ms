@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `student` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 INSERT INTO `student` (`id`, `student_id`, `name`, `last_name`, `report`, `yoa`, `parent`, `dob`, `gender`, `file`) VALUES
-(1, 'a100', 'Ron', 'Weasley', 'hard-working', '2012', '08138652645', '1993-05-05', 'male', 'ronweasley.jpg');
+(1, 'AS01-2341', 'Ron', 'Weasley', 'hard-working', '2012', '08138652645', '1993-05-05', 'male', 'ronweasley.jpg');
 
 ALTER TABLE `student`
   ADD PRIMARY KEY (`id`);
