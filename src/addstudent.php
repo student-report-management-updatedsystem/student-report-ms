@@ -206,18 +206,18 @@ if(isset($_POST['savestudent'])){
     $img=$_POST['img'];
 
     $image_name = $_FILES['img']['name'] ;
-<<<<<<< HEAD
+
     move_uploaded_file($_FILES['img']['tmp_name'], "simages/".$image_name);
 
     $insertquery="insert into student(`student_id`, `name`, `last_name`, `report`, `yoa`, `parent`, `dob`, `gender`, `file`)
     VALUES ('$stdid', '$fname','$lname','$report','$yoa','$phone','$dob','$gender','$image_name')";
-=======
+
     $imagelocname = "simages/$image_name";
     move_uploaded_file($_FILES['img']['tmp_name'], $imagelocname);
 
     $insertquery="insert into student(`student_id`, `name`, `last_name`, `report`, `yoa`, `parent`, `dob`, `gender`, `file`)
     VALUES ('$stdid', '$fname','$lname','$report','$yoa','$phone','$dob','$gender','$imagelocname')";
->>>>>>> 8c8615e96e27c0c3b7af6d73eafdb402cfb89742
+
 
 mysqli_query($conn,$insertquery);
 
