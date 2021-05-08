@@ -65,7 +65,7 @@ input[type=text], input[type=password],input[ type  ="tel"],input[ type  ="date"
             color:#49524B;">
 
 
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
 
 <div>ADD NEW STUDENT
 </div>
@@ -205,8 +205,12 @@ if(isset($_POST['savestudent'])){
     $gender=$_POST['gender'];
     $img=$_POST['img'];
 
+    $image_name = $_FILES['img']['name'] ;
+    $imagelocname = "simages/$image_name";
+    move_uploaded_file($_FILES['img']['tmp_name'], $imagelocname);
+
     $insertquery="insert into student(`student_id`, `name`, `last_name`, `report`, `yoa`, `parent`, `dob`, `gender`, `file`)
-    VALUES ('$stdid', '$fname','$lname','$report','$yoa','$phone','$dob','$gender','$img')";
+    VALUES ('$stdid', '$fname','$lname','$report','$yoa','$phone','$dob','$gender','$imagelocname')";
 
 mysqli_query($conn,$insertquery);
 
