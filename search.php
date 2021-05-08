@@ -83,7 +83,7 @@ $conn= new mysqli("localhost","root","","miniproject");
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
       }
 
-$res = mysqli_query($conn, "SELECT * FROM student WHERE name LIKE '%{$name}%' OR last_name LIKE '%{$name}'");
+$res = mysqli_query($conn, "SELECT * FROM student WHERE name LIKE '%{$name}%' OR last_name LIKE '%{$name}%'");
 
 
 while ($row = mysqli_fetch_array($res))
