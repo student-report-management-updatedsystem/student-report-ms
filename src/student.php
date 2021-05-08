@@ -30,7 +30,11 @@
 
 <center style="margin-top:20px;"><h4><i class="icon-edit icon-large" ></i> Student Information</h4></center>
 <hr>
+<<<<<<< HEAD
 <center><img src="simages/<?php echo $res['file'];?>" style="width:250px; height:250px; border-radius:28px;" alt=""/>
+=======
+<center><img src="<?php echo $res['file'];?>" style="width:250px; height:250px; border-radius:28px;" alt=""/>
+>>>>>>> 8c8615e96e27c0c3b7af6d73eafdb402cfb89742
 <br><br>
 
 <table>
