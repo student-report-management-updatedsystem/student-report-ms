@@ -81,7 +81,7 @@ input[type=text], input[type=password],input[ type  ="tel"],input[ type  ="date"
     <th></th>
     <th>
         <input type="text" style="width:265px; height:30px;" placeholder="studentid" id="stdid"
-        value="AS01-<?php $prefix= md5(rand(1,10)); echo strip_tags(substr($prefix ,0,4));?>" name="stdid" readonly Required /><br>
+        value="AS01-<?php $prefix= md5(time()*rand(1,100)); echo strip_tags(substr($prefix ,0,4));?>" name="stdid" readonly Required /><br>
     </th>
   </tr>
 
