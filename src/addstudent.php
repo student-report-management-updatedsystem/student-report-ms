@@ -206,34 +206,10 @@ if(isset($_POST['savestudent'])){
     $img=$_POST['img'];
 
     $image_name = $_FILES['img']['name'] ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> feac74bc64a85ae08599733ac5f02be9e511b7ed
-=======
-
->>>>>>> feac74bc64a85ae08599733ac5f02be9e511b7ed
     move_uploaded_file($_FILES['img']['tmp_name'], "simages/".$image_name);
 
     $insertquery="insert into student(`student_id`, `name`, `last_name`, `report`, `yoa`, `parent`, `dob`, `gender`, `file`)
     VALUES ('$stdid', '$fname','$lname','$report','$yoa','$phone','$dob','$gender','$image_name')";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> feac74bc64a85ae08599733ac5f02be9e511b7ed
-
-    $imagelocname = "simages/$image_name";
-    move_uploaded_file($_FILES['img']['tmp_name'], $imagelocname);
-
-    $insertquery="insert into student(`student_id`, `name`, `last_name`, `report`, `yoa`, `parent`, `dob`, `gender`, `file`)
-    VALUES ('$stdid', '$fname','$lname','$report','$yoa','$phone','$dob','$gender','$imagelocname')";
-
-<<<<<<< HEAD
->>>>>>> feac74bc64a85ae08599733ac5f02be9e511b7ed
-=======
->>>>>>> feac74bc64a85ae08599733ac5f02be9e511b7ed
 
 mysqli_query($conn,$insertquery);
 
