@@ -18,7 +18,7 @@
     <div class="sidebar-menu">
       <ul>
         <li>
-          <a href="../panel.php" class="active"><span class="las la-school"></span>
+          <a href="panel.php" class="active"><span class="las la-school"></span>
             <span>Dashboard</span></a>
         </li>
         <li>
@@ -30,8 +30,8 @@
             <span>Add</span></a>
         </li>
         <li>
-          <a href=""><span class="las la-user-minus"></span>
-            <span>Delete</span></a>
+          <a href="../index.php"><span class="las la-user-minus"></span>
+            <span>Logout</span></a>
         </li>
       </ul>
     </div>
@@ -50,7 +50,7 @@
        <form class="search" action="../search.php" method="post" >
        <div class="search-wrapper">
        <button type="submit" ><i class="las la-search"></i></button>
-       <input type="text" name="valueToSearch" placeholder="Search Here"required/></br>
+       <input class="search_input" type="text" name="valueToSearch" placeholder="Search Here"required/></br>
         </div>
       </form>
 

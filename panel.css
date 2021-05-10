@@ -14,7 +14,7 @@
   left: 0;
   top: 0;
   height: 100%;
-  background: #10375c;
+  background: #4e89ae;
   z-index: 100%;
 }
 .sidebar-brand{
@@ -129,8 +129,8 @@ main{
   justify-content: space-between;
   padding: 2rem;
   border-radius: 5px;
-  width: 240px;
-  height: 190px;
+  width: 300px;
+  height: 250px;
   padding-top: 49px;
   background-color: white;
 }

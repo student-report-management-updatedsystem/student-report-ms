@@ -18,7 +18,7 @@
   h1
   {
     font-size:18px;
-    color:#000;
+    color:#14274e;
     text-align: center;
     margin-top: -20px;
     margin-bottom: 20px;
@@ -45,7 +45,7 @@
   {
     text-transform: uppercase;
     font-weight: 500;
-    background: #222831;
+    background: #43658b;
     color:white;
   }
   tr:hover {background-color: #f5f5f5;}

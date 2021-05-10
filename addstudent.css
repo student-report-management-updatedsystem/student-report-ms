@@ -14,7 +14,7 @@
   left: 0;
   top: 0;
   height: 100%;
-  background: #10375c;
+  background: #4e89ae;
   z-index: 100%;
 }
 .sidebar-brand{
@@ -98,6 +98,10 @@ form.search button:hover {
    border: none;
    outline: none;
 }
+.search_input{
+  margin: 0;
+  background: none;
+}
 .user-wrapper {
   display: flex;
   align-items: center;
@@ -114,13 +118,13 @@ form.search button:hover {
   width: 98%;
   padding: 15px;
   margin: 5px 0 22px 0;
-  background-color:#222;
+  background-color:#43658b;
   border-radius:12px;
   text-align: center;
   color: white;
 }
 
-input[type=text], input[type=password],input[ type  ="tel"],input[ type  ="date"],input[ type  ="file"],input[ type  ="number"]
+.form input[type=text], input[type=password],input[ type  ="tel"],input[ type  ="date"],input[ type  ="file"],input[ type  ="number"]
 {
   width: 100%;
   padding: 15px;
