@@ -50,7 +50,7 @@
        <form class="search" action="../search.php" method="post" >
        <div class="search-wrapper">
        <button type="submit" ><i class="las la-search"></i></button>
-       <input type="text" name="valueToSearch" placeholder="Search Here"required/></br>
+       <input class="search_input" type="text" name="valueToSearch" placeholder="Search Here"required/></br>
         </div>
       </form>
 

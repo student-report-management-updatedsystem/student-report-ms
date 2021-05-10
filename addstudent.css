@@ -98,6 +98,10 @@ form.search button:hover {
    border: none;
    outline: none;
 }
+.search_input{
+  margin: 0;
+  background: none;
+}
 .user-wrapper {
   display: flex;
   align-items: center;
@@ -120,7 +124,7 @@ form.search button:hover {
   color: white;
 }
 
-input[type=text], input[type=password],input[ type  ="tel"],input[ type  ="date"],input[ type  ="file"],input[ type  ="number"]
+.form input[type=text], input[type=password],input[ type  ="tel"],input[ type  ="date"],input[ type  ="file"],input[ type  ="number"]
 {
   width: 100%;
   padding: 15px;
