@@ -9,11 +9,8 @@
   <head>
     <meta charset="utf-8">
     <title>Student</title>
-    <style media="screen">
-      *{font-family:'arial'};
-    </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-
+		<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="../student.css">
   </head>
   <body>
 
@@ -27,65 +24,122 @@
 
   while($res=mysqli_fetch_array($query))
   {?>
+		<div class="sidebar">
+			<div class="sidebar-brand">
+				<h2><span class="lab la-accusoft"></span> ABC School</h2>
+			</div>
 
-<center style="margin-top:20px;"><h4><i class="icon-edit icon-large" ></i> Student Information</h4></center>
-<hr>
-<center><img src="simages/<?php echo $res['file'];?>" style="width:250px; height:250px; border-radius:28px;" alt=""/>
-<br><br>
+			<div class="sidebar-menu">
+				<ul>
+					<li>
+						<a href="../panel.php" class="active"><span class="las la-school"></span>
+							<span>Dashboard</span></a>
+					</li>
+					<li>
+						<a href="../src/viewstudenttable.php"><span class="las la-user-graduate"></span>
+							<span>View</span></a>
+					</li>
+					<li>
+						<a href="../src/addstudent.php"><span class="las la-graduation-cap"></span>
+							<span>Add</span></a>
+					</li>
+					<li>
+						<a href="../index.php"><span class="las la-user-minus"></span>
+							<span>Logout</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-<table>
-<tr>
-<td> Student ID : </td>
-<td style="padding: 10px;
-				border-top: 1px solid #fafafa;
-				text-align: center;
-				color: #7d7d7d;"> <?php echo $res['student_id']; ?></td>
-</tr>
-<tr>
-<td> Full Name :  </td>
-<td style="padding: 10px;
-				text-align: center;
-				color: #7d7d7d;"> <?php echo $res['name']; ?> <?php echo $res['last_name']; ?></td>
-</tr>
-<tr>
-<td> Gender:  </td>
-<td style="padding: 10px;
-				text-align: center;
-				color: #7d7d7d;"> <?php echo $res['gender']; ?></td>
-</tr>
-<tr>
-<td> D.O.B:  </td>
-<td style="padding: 10px;
-				text-align: center;
-				color: #7d7d7d;"> <?php echo $res['dob']; ?></td>
-</tr>
-<tr>
-<td> Admission Year :  </td>
-<td style="padding: 10px;
-				text-align: center;
-				color: #7d7d7d;"> <?php echo $res['yoa']; ?></td>
-</tr>
-<tr>
-<td> Parent Phone:  </td>
-<td style="padding: 10px;
-				text-align: center;
-				color: #7d7d7d;"> <?php echo $res['parent']; ?></td>
-</tr>
-<tr>
-<td> Report :  </td>
-<td style="padding: 10px;
-				text-align: center;
-				color: #7d7d7d;"> <?php echo $res['report']; ?></td>
-</tr>
+		<div class="main-content">
+			 <header>
+				 <h2>
+					 <label for="">
+						 <span class="las la-bars"></span>
+					 </label>
+
+					 Dashboard
+				 </h2>
+
+				 <form class="search" action="search.php" method="post" >
+				 <div class="search-wrapper">
+				 <button type="submit" ><i class="las la-search"></i></button>
+				 <input type="text" name="valueToSearch" placeholder="Search Here"required/></br>
+					</div>
+				</form>
+
+				 <div class="user-wrapper">
+					 <img src="https://img.icons8.com/pastel-glyph/64/000000/user-male--v1.png" width="40px" height="40px"/>
+					 <div>
+						 <h4>Arya Anju Anjali Adarsh</h4>
+						 <small>Super Admin</small>
+					 </div>
+				 </div>
+			 </header>
+			 <main>
+				 <div class="view">
+					 <center><div class="student"><h4 class="info"><i class="icon-edit icon-large" ></i> Student Information</h4></div></center>
+					 <div class="contain_table">
+						 <table class="main_table">
+							<td>
+								<div class="student_image"><img class="student_img" src="simages/<?php echo $res['file'];?>" /></div>
+							</td>
+							<td class="right_table" style="padding-right: 60px;">
+								<div class="table">
+									<table>
+								 <tr>
+								 <td> Student ID : </td>
+								 <td style="padding: 10px;
+												 border-top: 1px solid #fafafa;
+												 color: #7d7d7d;"> <?php echo $res['student_id']; ?></td>
+								 </tr>
+								 <tr>
+								 <td> Full Name :  </td>
+								 <td style="padding: 10px;
+												 color: #7d7d7d;"> <?php echo $res['name']; ?> <?php echo $res['last_name']; ?></td>
+								 </tr>
+								 <tr>
+								 <td> Gender:  </td>
+								 <td style="padding: 10px;
+												 color: #7d7d7d;"> <?php echo $res['gender']; ?></td>
+								 </tr>
+								 <tr>
+								 <td> D.O.B:  </td>
+								 <td style="padding: 10px;
+												 color: #7d7d7d;"> <?php echo $res['dob']; ?></td>
+								 </tr>
+								 <tr>
+								 <td> Admission Year :  </td>
+								 <td style="padding: 10px;
+												 color: #7d7d7d;"> <?php echo $res['yoa']; ?></td>
+								 </tr>
+								 <tr>
+								 <td> Parent Phone:  </td>
+								 <td style="padding: 10px;
+												 color: #7d7d7d;"> <?php echo $res['parent']; ?></td>
+								 </tr>
+								 <tr>
+								 <td> Report :  </td>
+								 <td style="padding: 10px;
+												 color: #7d7d7d;"> <?php echo $res['report']; ?></td>
+								 </tr>
 
 
-</table>
-<br>
+								 </table>
+							 </div>
 
-</center>
+						 </td>
+						</table>
+					 </div>
 
-<?php
-}
-?>
+					 </div>
+
+	 				<?php
+	 				}
+	 				?>
+				 </div>
+
+			 </main>
+		 </div>
   </body>
 </html>

@@ -67,7 +67,7 @@
              <thead>
                <tr>
                  <th>student_id</th>
-                 <th>name of student</th>
+                 <th>name</th>
                  <th>YOA</th>
                  <th>Phone</th>
                  <th>gender</th>

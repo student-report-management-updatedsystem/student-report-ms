@@ -18,7 +18,7 @@
     <div class="sidebar-menu">
       <ul>
         <li>
-          <a href="panel.php" class="active"><span class="las la-school"></span>
+          <a href="../panel.php" class="active"><span class="las la-school"></span>
             <span>Dashboard</span></a>
         </li>
         <li>
@@ -65,8 +65,8 @@
 
 
      <main>
-       <div class="form">
-         <form method="POST">
+       <div class="form" >
+         <form method="POST" enctype="multipart/form-data">
 
          <div class="add">ADD NEW STUDENT
          </div>
@@ -219,15 +219,11 @@ if(isset($_POST['savestudent'])){
     $insertquery="insert into student(`student_id`, `name`, `last_name`, `report`, `yoa`, `parent`, `dob`, `gender`, `file`)
     VALUES ('$stdid', '$fname','$lname','$report','$yoa','$phone','$dob','$gender','$image_name')";
 
-    $imagelocname = "simages/$image_name";
-    move_uploaded_file($_FILES['img']['tmp_name'], $imagelocname);
-
-    $insertquery="insert into student(`student_id`, `name`, `last_name`, `report`, `yoa`, `parent`, `dob`, `gender`, `file`)
-    VALUES ('$stdid', '$fname','$lname','$report','$yoa','$phone','$dob','$gender','$imagelocname')";
 
 
 mysqli_query($conn,$insertquery);
 
+echo '<script>alert("New student added successfully")</script>';
 
 }
 
