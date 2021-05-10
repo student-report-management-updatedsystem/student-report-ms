@@ -45,7 +45,7 @@
          Dashboard
        </h2>
 
-       <form class="search" action="search.php" method="post" >
+       <form class="search" action="../search.php" method="post" >
        <div class="search-wrapper">
        <button type="submit" ><i class="las la-search"></i></button>
        <input type="text" name="valueToSearch" placeholder="Search Here"required/></br>
