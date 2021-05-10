@@ -17,7 +17,7 @@
       <div class="sidebar-menu">
         <ul>
           <li>
-            <a href="" class="active"><span class="las la-school"></span>
+            <a href="../panel.php" class="active"><span class="las la-school"></span>
               <span>Dashboard</span></a>
           </li>
           <li>

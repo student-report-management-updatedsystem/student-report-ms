@@ -44,7 +44,7 @@
   background: #fff;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  color: #127681;
+  color: #3d84b8;
   border-radius: 30px 0px 0px 30px;
 }
 .sidebar-menu a span:first-child {
@@ -64,6 +64,7 @@ header{
   width: calc(100% - 345px);
   top: 0;
   z-index: 100;
+  background: white;
 }
 header h2{
   color: #222;
@@ -73,23 +74,17 @@ header label span{
   padding-right: 1rem;
 }
 .search-wrapper{
- border: 1px solid #ccc;
- border-radius: 30px;
- height: 40px;
- display: flex;
- align-items: center;
- overflow-x: hidden;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
 }
-form.search button{
-
- background: white;
- padding: 0rem 1rem;
- font-size: 1.5rem;
- border: 0px  white;
-
-}
-form.search button:hover {
-  background:#CCCFCC;
+.search-wrapper span{
+  display: inline-block;
+  padding: 0rem 1rem;
+  font-size: 1.5rem;
 }
 .search-wrapper input{
     height: 100%;
@@ -109,49 +104,63 @@ form.search button:hover {
   display: inline-block;
   color: grey;
 }
-main{
-  margin-top: 89px;
-  padding: 2rem 1.5rem;
-  padding-left: 120px;
-  background: #f1f5f9;
-  min-height: calc(100vh - 90px);
-  padding-top: 100px;
-}
-
-.cards{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
-  margin-top: 1rem;
-}
-.card-single{
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
-  border-radius: 5px;
-  width: 240px;
-  height: 190px;
-  padding-top: 49px;
-  background-color: white;
-}
-
-.card-single:hover{
-  background: #d3e0ea;
+.add {
+  width: 98%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  background-color:#222;
+  border-radius:12px;
+  text-align: center;
   color: white;
 }
-.card-single a{
-  color: black;
-}
-.card-single div:last-child span{
-  font-size: 3rem;
-  color: #a6d6d6;
-  opacity: 0.7;
-}
-.card-single div:first-child span{
-  color: grey;
-  opacity: 0.7;
-}
-.l-1
+
+input[type=text], input[type=password],input[ type  ="tel"],input[ type  ="date"],input[ type  ="file"],input[ type  ="number"]
 {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.button
+{
+  border: none;
   color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width:40%;
+
+}
+
+.button1
+{ align-items: center;
+  background-color: #f05454;
+  color: white;
+
+  border-radius: 12px;
+}
+
+.button1:hover
+{
+  background-color: #4CAF50;
+  color: white;
+}
+.form{
+  text-align: center;
+}
+main{
+  margin-top: 0;
+  padding: 2rem 1.5rem;
+  padding-left: 75px;
+  min-height: calc(100vh - 90px);
+  padding-top: 30px;
+  transform: scale(0.9);
 }
