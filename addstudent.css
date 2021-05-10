@@ -14,7 +14,7 @@
   left: 0;
   top: 0;
   height: 100%;
-  background: #10375c;
+  background: #4e89ae;
   z-index: 100%;
 }
 .sidebar-brand{
@@ -108,7 +108,7 @@ header label span{
   width: 98%;
   padding: 15px;
   margin: 5px 0 22px 0;
-  background-color:#222;
+  background-color:#43658b;
   border-radius:12px;
   text-align: center;
   color: white;
