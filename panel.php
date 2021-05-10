@@ -20,11 +20,11 @@
                 <span>Dashboard</span></a>
             </li>
             <li>
-              <a href="../src/viewstudenttable.php"><span class="las la-user-graduate"></span>
+              <a href="src/viewstudenttable.php"><span class="las la-user-graduate"></span>
                 <span>View</span></a>
             </li>
             <li>
-              <a href="../src/addstudent.php"><span class="las la-graduation-cap"></span>
+              <a href="src/addstudent.php"><span class="las la-graduation-cap"></span>
                 <span>Add</span></a>
             </li>
             <li>
