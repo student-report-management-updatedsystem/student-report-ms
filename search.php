@@ -31,8 +31,8 @@
               <span>Add</span></a>
           </li>
           <li>
-            <a href=""><span class="las la-user-minus"></span>
-              <span>Delete</span></a>
+            <a href="index.php"><span class="las la-user-minus"></span>
+              <span>Logout</span></a>
           </li>
         </ul>
       </div>
