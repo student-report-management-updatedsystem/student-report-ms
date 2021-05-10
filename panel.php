@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -17,15 +16,15 @@
         <div class="sidebar-menu">
           <ul>
             <li>
-              <a href="" class="active"><span class="las la-school"></span>
+              <a href="panel.php" class="active"><span class="las la-school"></span>
                 <span>Dashboard</span></a>
             </li>
             <li>
-              <a href="src/viewstudenttable.php"><span class="las la-user-graduate"></span>
+              <a href="../src/viewstudenttable.php"><span class="las la-user-graduate"></span>
                 <span>View</span></a>
             </li>
             <li>
-              <a href="src/addstudent.php"><span class="las la-graduation-cap"></span>
+              <a href="../src/addstudent.php"><span class="las la-graduation-cap"></span>
                 <span>Add</span></a>
             </li>
             <li>
@@ -64,33 +63,32 @@
 
          <main>
             <div class="cards">
-              <div class="card-single">
+              <a href="src/viewstudenttable.php" style="color:black;"><div class="card-single card-single-1">
                 <div>
-                  <a href="src/viewstudenttable.php"><h1>View</h1></a>
+                  <h1>View</h1>
                   <span>Students</span>
                 </div>
                 <div>
-                  <span class="las la-users"></span>
+                  <span class="l-1 las la-users"></span>
                 </div>
-              </div>
-              <div class="card-single">
+              </div></a>
+              <a href="src/addstudent.php" style="color: black;"><div class="card-single card-single-2">
                 <div>
-                  <a href="src/addstudent.php" style="color: black;"><h1>Add</h1></a>
-                  <span>Students</span>
-                </div>
-                <div>
-                  <span class="las la-graduation-cap"></span>
-                </div>
-              </div>
-              <div class="card-single">
-                <div>
-                  <a href="index.php" style="color:black;"><h1>Logout</h1></a>
-                  <span>Students</span>
+                  <h1>Add</h1>
+                  <span >Students</span>
                 </div>
                 <div>
-                  <span class="las la-user-minus"></span>
+                  <span class="l-2 las la-graduation-cap"></span>
                 </div>
-              </div>
+              </div></a>
+              <a href="index.php" style="color:black;"><div class="card-single card-single-3">
+                <div>
+                  <h1>Logout</h1>
+                </div>
+                <div>
+                  <span class="l-3 las la-user-minus"></span>
+                </div>
+              </div></a>
             </div>
 
          </main>
