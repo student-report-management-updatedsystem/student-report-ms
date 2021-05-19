@@ -89,7 +89,7 @@
                          <td><?php echo $res['yoa'];?></td>
                          <td><?php echo $res['parent'];?></td>
                          <td><?php echo $res['gender'];?></td>
-                         <td><i class="fa fa-edit" aria-hidden="true"></i></td>
+                         <td><a href="editstudent.php?id=<?php echo $res['id']; ?>"<i class="fa fa-edit" aria-hidden="true"></i></td>
                            <td><a href="deletestudent.php?id=<?php echo $res['id']; ?>"<i class="fa fa-trash" aria-hidden="true"></i></td>
                          <td><a href="student.php?id=<?php echo $res['id']; ?>"><i class="fa fa-id-badge" aria-hidden="true"></i></td>
 
