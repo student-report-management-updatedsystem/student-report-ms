@@ -120,7 +120,7 @@ few seconds.</p>
               <p class="f-c-2"><i class="las la-female la-32px" ></i>Anju Suresh</p>
             </div>
             <div class="col-lg-3 l-2">
-              <p class="f-c-2"><i class="las la-female"></i>E Anjali Shankar</p>
+              <p class="f-c-2"><i class="las la-female"></i>E Anjali Sankar</p>
             </div>
             <div class="col-lg-3 l-3">
               <p class="f-c-2"><i class="las la-male"></i>Adarsh S Kumar</p>
