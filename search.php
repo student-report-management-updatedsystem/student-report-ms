@@ -98,11 +98,13 @@ while ($row = mysqli_fetch_array($res))
 <td><?php echo $row['yoa'];?></td>
 <td><?php echo $row['parent'];?></td>
 <td><?php echo $row['gender'];?></td>
-<td><i class="fa fa-edit" aria-hidden="true"></i></td>
-<td><i class="fa fa-trash" aria-hidden="true"></i></td>
-<td><a href="student0.php?id=<?php echo $row['id']; ?>"><i class="fa fa-id-badge" aria-hidden="true"></i></td>
-
+<td><a href="src/editstudent.php?id=<?php echo $row['id']; ?>"><i class="fa fa-edit" aria-hidden="true"></i></td>
+<td><a href="src/deletestudent.php?id=<?php echo $row['id']; ?>"><i class="fa fa-trash" aria-hidden="true"></i></td>
+<td><a href="src/student.php?id=<?php echo $row['id']; ?>"><i class="fa fa-id-badge" aria-hidden="true"></i></td>
 </tr>
+
+
+
 
  <?php
 }mysqli_close($conn);
