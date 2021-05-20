@@ -35,7 +35,7 @@
     </div>
   </div>
 
-  <div class="main-content">
+  <div class="main-content" style="background: #f1f5f9;">
      <header>
        <h2>
          <label for="">
@@ -62,7 +62,7 @@
      </header>
 
 
-     <main>
+     <main style="padding-top: 70px;">
        <div class="form" >
          <form method="POST" enctype="multipart/form-data">
 
@@ -81,7 +81,7 @@
              </th>
              <th></th>
              <th>
-                 <input type="text" style="width:265px; height:30px;" placeholder="studentid" id="stdid"
+                 <input type="text" style="background-color: white; width:265px; height:30px;" placeholder="studentid" id="stdid"
                  value="AS01-<?php $prefix= md5(rand(1,10)); echo strip_tags(substr($prefix ,0,4));?>" name="stdid" readonly Required /><br>
              </th>
            </tr>
@@ -93,7 +93,7 @@
              </th>
              <th></th>
              <th>
-                 <input type="text" style="width:265px; height:30px;" placeholder="First Name"id="fname"   name="fname" Required /><br>
+                 <input type="text" style="background-color: white; width:265px; height:30px;" placeholder="First Name"id="fname"   name="fname" Required /><br>
              </th>
            </tr>
 
@@ -104,7 +104,7 @@
              </th>
              <th></th>
              <th>
-                 <input type="text" style="width:265px; height:30px;" id="lname" name="lname"placeholder="Second Name"  Required /><br>
+                 <input type="text" style="background-color: white; width:265px; height:30px;" id="lname" name="lname"placeholder="Second Name"  Required /><br>
              </th>
           </tr>
 
@@ -115,11 +115,10 @@
            </th><th></th>
            <th><select name="report" id="report"
              style=
-           "width:95%;padding: 15px;
+           "background-color: white; width:95%;padding: 15px;
            margin: 5px 0 22px 0;
            display: inline-block;
-           border: none;
-           background: #f1f1f1;" required>
+           border: none;" required>
              <option value="" disabled selected></option>
              <option value="excellent">Excellent</option>
 
@@ -134,7 +133,7 @@
           </tr>
 
            <tr align="left"><th>
-           YEAR OF ADMISSION  </th><th></th><th><input type="number" name="yoa" min="2005" max="2021"steps="4"maxlength="4"style="width:265px; height:30px; "required/><br>
+           YEAR OF ADMISSION  </th><th></th><th><input type="number" name="yoa" min="2005" max="2021"steps="4"maxlength="4"style="background-color: white; width:265px; height:30px; "required/><br>
              </th>
           </tr>
 
@@ -144,7 +143,7 @@
            PARENT PHONE NO</th>
           <th>
           </th>
-          <th><input type  ="tel" style="width:265px; height:30px;" name="phone"placeholder="Ten Digits"  maxlength="10"pattern="[0-9]{10}" required/><br>
+          <th><input type  ="tel" style="background-color: white; width:265px; height:30px;" name="phone"placeholder="Ten Digits"  maxlength="10"pattern="[0-9]{10}" required/><br>
              </th>
           </tr>
 
@@ -152,7 +151,7 @@
          <tr align="left">
            <th>
            DOB
-         </th><th></th><th><input style="width:265px; height:30px;" type="date" name="dob" required/><br>
+         </th><th></th><th><input style="background-color: white; width:265px; height:30px;" type="date" name="dob" required/><br>
              </th>
           </tr>
 
@@ -173,7 +172,7 @@
          <th>
 
          </th>
-         <th><input type="file" name="img" multiple required>
+         <th><input style="background-color: white; "type="file" name="img" multiple required>
          </th>
          </tr>
 
