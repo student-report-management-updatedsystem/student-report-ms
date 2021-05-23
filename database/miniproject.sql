@@ -14,8 +14,8 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 CREATE TABLE IF NOT EXISTS `student` (
-  `id` int(11) NOT NULL,
-  `student_id` varchar(220) NOT NULL,
+  `id` int(11) NOT NULL UNIQUE,
+  `student_id` varchar(220) NOT NULL UNIQUE,
   `name` varchar(45) NOT NULL,
   `last_name` varchar(45) NOT NULL,
   `report` varchar(2000) NOT NULL,
