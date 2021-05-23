@@ -78,7 +78,7 @@
                  <?php
 
                  include 'auth.php';
-                 $selectquery =" select * from student";
+                 $selectquery =" select * from student ORDER BY name ASC";
                  $query = mysqli_query($conn,$selectquery);
 
                    while($res=mysqli_fetch_array($query))
@@ -94,6 +94,7 @@
                          <td><a href="student.php?id=<?php echo $res['id']; ?>"><i class="fa fa-id-badge" aria-hidden="true"></i></td>
 
                          </tr>
+
                  <?php
                    }
                  ?>

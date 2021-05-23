@@ -113,27 +113,27 @@
            <th>
              <label for="report">REPORT</label>
            </th><th></th>
-           <th><select name="report" id="report"
+           <th><select name="report" placeholder="Choose from the options" id="report"
              style=
            "background-color: white; width:95%;padding: 15px;
            margin: 5px 0 22px 0;
            display: inline-block;
            border: none;" required>
              <option value="" disabled selected></option>
-             <option value="excellent">Excellent</option>
+             <option value="Excellent">Excellent</option>
 
-             <option value="good">Good</option>
+             <option value="Good">Good</option>
 
-             <option value="average">Average</option>
+             <option value="Average">Average</option>
 
-             <option value="poor">Poor</option>
+             <option value="Poor">Poor</option>
            </select>
          <br>
              </th>
           </tr>
 
            <tr align="left"><th>
-           YEAR OF ADMISSION  </th><th></th><th><input type="number" name="yoa" min="2005" max="2021"steps="4"maxlength="4"style="background-color: white; width:265px; height:30px; "required/><br>
+           YEAR OF ADMISSION  </th><th></th><th><input type="number" name="yoa" placeholder="Choose the Year" min="2005" max="2021"steps="4"maxlength="4"style="background-color: white; width:265px; height:30px; "required/><br>
              </th>
           </tr>
 
@@ -151,17 +151,17 @@
          <tr align="left">
            <th>
            DOB
-         </th><th></th><th><input style="background-color: white; width:265px; height:30px;" type="date" name="dob" required/><br>
+         </th><th></th><th><input style="background-color: white; width:265px; height:30px;" type="date" max="2017-06-01"name="dob" required/><br>
              </th>
           </tr>
 
          <tr align="left"><th>
-           GENDER </th><th></th><th><input type="radio" id="male" name="gender" value="male" required>
-           <label for="male">Male</label>
-           <input type="radio" id="female" name="gender" value="female">
-           <label for="female">Female</label>
-           <input type="radio" id="other" name="gender" value="other">
-           <label for="other">Other</label><br>
+           GENDER </th><th></th><th><input type="radio" id="Male" name="gender" value="Male" required>
+           <label for="Male">Male</label>
+           <input type="radio" id="Female" name="gender" value="Female">
+           <label for="Female">Female</label>
+           <input type="radio" id="Other" name="gender" value="Other">
+           <label for="Other">Other</label><br>
          </th></tr>
 
 
