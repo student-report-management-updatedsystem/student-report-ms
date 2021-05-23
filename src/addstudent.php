@@ -76,7 +76,7 @@
          <table align="center">
 
            <tr align="left">
-             <th>
+             <th style="padding-bottom: 15px;">
                   <label for="fname">STUDENT ID</label>
              </th>
              <th></th>
@@ -88,7 +88,7 @@
 
 
            <tr align="left">
-             <th>
+             <th style="padding-bottom: 15px;">
                   <label for="fname">FIRST NAME</label>
              </th>
              <th></th>
@@ -99,7 +99,7 @@
 
 
            <tr align="left">
-             <th>
+             <th style="padding-bottom: 15px;">
                   <label for="lname">LAST NAME</label>
              </th>
              <th></th>
@@ -110,7 +110,7 @@
 
 
          <tr align="left">
-           <th>
+           <th style="padding-bottom: 15px;">
              <label for="report">REPORT</label>
            </th><th></th>
            <th><select name="report" placeholder="Choose from the options" id="report"
@@ -132,14 +132,14 @@
              </th>
           </tr>
 
-           <tr align="left"><th>
+           <tr align="left"><th style="padding-bottom: 15px;">
            YEAR OF ADMISSION  </th><th></th><th><input type="number" name="yoa" placeholder="Choose the Year" min="2005" max="2021"steps="4"maxlength="4"style="background-color: white; width:265px; height:30px; "required/><br>
              </th>
           </tr>
 
 
          <tr align="left">
-           <th>
+           <th style="padding-bottom: 15px;">
            PARENT PHONE NO</th>
           <th>
           </th>
@@ -149,13 +149,13 @@
 
 
          <tr align="left">
-           <th>
+           <th style="padding-bottom: 15px;">
            DOB
          </th><th></th><th><input style="background-color: white; width:265px; height:30px;" type="date" max="2017-06-01"name="dob" required/><br>
              </th>
           </tr>
 
-         <tr align="left"><th>
+         <tr align="left"><th style="padding-bottom: 15px;">
            GENDER </th><th></th><th><input type="radio" id="Male" name="gender" value="Male" required>
            <label for="Male">Male</label>
            <input type="radio" id="Female" name="gender" value="Female">
@@ -166,7 +166,7 @@
 
 
          <tr align="left">
-             <th>
+             <th style="padding-bottom: 15px;">
           UPLOAD PHOTO
          </th>
          <th>
