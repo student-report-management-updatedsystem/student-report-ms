@@ -89,7 +89,7 @@ few seconds.</p>
         </div>
         <div class="content">
           <h3>View Student</h3>
-          <p class="feature-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+          <p class="feature-content">Details of the students including profile picture can be viewed.</p>
         </div>
       </div>
       <div class="box b-2">
@@ -98,7 +98,7 @@ few seconds.</p>
         </div>
         <div class="content">
           <h3>Add Student</h3>
-          <p class="feature-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+          <p class="feature-content">New students can be added using this feature.</p>
         </div>
       </div>
       <div class="box b-3">
@@ -107,7 +107,7 @@ few seconds.</p>
         </div>
         <div class="content">
           <h3>Delete Student</h3>
-          <p class="feature-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+          <p class="feature-content">Records of the added student can be removed.</p>
         </div>
       </div>
     </div>
