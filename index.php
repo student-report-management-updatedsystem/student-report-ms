@@ -66,10 +66,10 @@
           <h3 class="h-2">Our Vision</h3>
           <div class="p-2">
             <p class="p-1">This system provides us a simple
-interface for maintainance of student information.It can be used by educational
+interface for maintenance  of student information.It can be used by educational
 institutes or colleges to maintain the records of students easily. Throughout the project the focus has been on presenting information in an easy and
-intelligible manner.The system provides facilitiies to create profiles of students
-thus reducing paperwork and automating the record genreration process in an
+intelligible manner.The system provides facilities to create profiles of students
+thus reducing paperwork and automating the record generation process in an
 educational institution.The vision of Student information System is to allow the administrator of
 any organization to edit and find out the personal details of a student and
 allows the student to keep up to date his profile .It’ll also facilitate keeping all
