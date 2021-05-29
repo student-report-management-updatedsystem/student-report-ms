@@ -21,11 +21,11 @@ CREATE TABLE IF NOT EXISTS `student` (
   `parent` varchar(200) NOT NULL,
   `dob` date NOT NULL,
   `gender` varchar(7) NOT NULL,
-  `cgp` float(45) NOT NULL,
+  `cgpa` float(45) NOT NULL,
   `file` varchar(400) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
-INSERT INTO `student` (`id`, `student_id`, `name`, `last_name`, `report`, `yoa`, `parent`, `dob`, `gender`,`cgp`, `file`) VALUES
+INSERT INTO `student` (`id`, `student_id`, `name`, `last_name`, `report`, `yoa`, `parent`, `dob`, `gender`,`cgpa`, `file`) VALUES
 (1, 'AS01-2341', 'Ron', 'Weasley', 'hard-working', '2012', '08138652645', '1993-05-05', 'male','9.8', 'ronweasley.jpg');
 
 ALTER TABLE `student`

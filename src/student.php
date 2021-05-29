@@ -121,7 +121,7 @@
 								 <tr>
 									 <td> CGPA:  </td>
 									 <td style="padding: 10px;
-													 color: #7d7d7d;"> <?php echo $res['cgp']; ?></td>
+													 color: #7d7d7d;"> <?php echo $res['cgpa']; ?></td>
 									 </tr>
 									 <tr>
 								 <td> Report :  </td>
