@@ -77,7 +77,7 @@
 
            <tr align="left">
              <th style="padding-bottom: 15px;">
-                  <label for="fname">STUDENT ID</label>
+                  <label for="stdid">STUDENT ID</label>
              </th>
              <th></th>
              <th>
@@ -132,8 +132,13 @@
              </th>
           </tr>
 
+          <tr align="left"><th style="padding-bottom: 15px;">
+          CGPA </th><th></th><th><input type="number" name="cgpa" placeholder="eg : 8.55,9.00" min="0" max="10"step="0.01"maxlength="2"style="background-color: white; width:265px; height:30px; "required/><br>
+            </th>
+         </tr>
+
            <tr align="left"><th style="padding-bottom: 15px;">
-           YEAR OF ADMISSION  </th><th></th><th><input type="number" name="yoa" placeholder="Choose the Year" min="2005" max="2021"steps="4"maxlength="4"style="background-color: white; width:265px; height:30px; "required/><br>
+           YEAR OF ADMISSION  </th><th></th><th><input type="number" name="yoa" placeholder="Choose the Year" min="2005" max="2021"step="1"maxlength="4"style="background-color: white; width:265px; height:30px; "required/><br>
              </th>
           </tr>
 
@@ -203,6 +208,7 @@ if(isset($_POST['savestudent'])){
     $fname=$_POST['fname'];
     $lname=$_POST['lname'];
     $report=$_POST['report'];
+    $cgpa=$_POST['cgpa'];
     $yoa=$_POST['yoa'];
     $phone=$_POST['phone'];
     $dob=$_POST['dob'];
@@ -213,8 +219,8 @@ if(isset($_POST['savestudent'])){
 
     move_uploaded_file($_FILES['img']['tmp_name'], "simages/".$image_name);
 
-    $insertquery="insert into student(`student_id`, `name`, `last_name`, `report`, `yoa`, `parent`, `dob`, `gender`, `file`)
-    VALUES ('$stdid', '$fname','$lname','$report','$yoa','$phone','$dob','$gender','$image_name')";
+    $insertquery="insert into student(`student_id`, `name`, `last_name`, `report`,`cgp`, `yoa`, `parent`, `dob`, `gender`, `file`)
+    VALUES ('$stdid', '$fname','$lname','$report','$cgpa','$yoa','$phone','$dob','$gender','$image_name')";
 
 
 
