@@ -44,7 +44,7 @@
              <h1 class="heading">Welcome To <span>ABC PVT</span></h1>
              <h1 class="heading">SCHOOL</h1>
              <h6 class="paragraph">You are welcome to the ABC School's student report management system.
-               This is a software solution designed to help schools track and manage all their student data – everything from thier admission year, student id, profile and more.
+               This is a software solution designed to help schools track and manage all their student data – everything from their admission year, student id, profile and more.
                Since student play a major part of an institution, this system will help the institution to keep track of all the students details in one stretch.
                This will also reduce the involvement of many pen paper work. If you want to get details of any student,
              it can be searched up within minutes rather than looking upon huge heap of files.</h6>
