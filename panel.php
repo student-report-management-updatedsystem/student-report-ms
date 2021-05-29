@@ -81,10 +81,10 @@
                   <span class="l-2 las la-graduation-cap"></span>
                 </div>
               </div></a>
-              <a href="src/editstudent.php" style="color:black;"><div class="card-single card-single-3">
+              <a href="index.php" style="color:black;"><div class="card-single card-single-3">
                 <div>
-                  <h1>Edit</h1>
-                  <span >Students</span>
+                  <h1>Logout</h1>
+
                 </div>
                 <div>
                   <span class="l-3 las la-user-minus"></span>
