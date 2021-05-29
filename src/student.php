@@ -119,7 +119,7 @@
 												 color: #7d7d7d;"> <?php echo $res['parent']; ?></td>
 								 </tr>
 								 <tr>
-									 <td> CGP:  </td>
+									 <td> CGPA:  </td>
 									 <td style="padding: 10px;
 													 color: #7d7d7d;"> <?php echo $res['cgp']; ?></td>
 									 </tr>
