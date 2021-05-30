@@ -62,15 +62,16 @@
     </div>
   </header>
   <main style="padding-top: 80px;">
-    <form method="POST">
+
 
     <div class="edit-student"> EDIT STUDENT
     </div>
     <br>
-
-    <?php
+   <form method="POST"><?php
 
     include 'auth.php';
+
+
 
 
     $id=$_GET['id'];
@@ -78,8 +79,26 @@
 
     $query = mysqli_query($conn,$selectquery);
 
-    while($res=mysqli_fetch_array($query))
-    {?>
+    $res=mysqli_fetch_array($query);
+
+    if(isset($_POST['Update'])){
+      $fname=$_POST['fname'];
+      $lname=$_POST['lname'];
+      $dob=$_POST['dob'];
+      $gender=$_POST['gender'];
+      $phone=$_POST['phone'];
+      $yoa=$_POST['yoa'];
+      $cgpa=$_POST['cgpa'];
+      $report=$_POST['report'];
+
+        $updatequery="UPDATE `student` SET `name`='$fname',`last_name`='$lname',`dob`='$dob',`gender`='$gender',`parent`='$phone',`yoa`='$yoa',`cgpa`='$cgpa',`report`='$report' WHERE `id`=$id";
+
+
+
+    $query=mysqli_query($conn,$updatequery);
+    header("location: viewstudenttable.php");
+  }?>
+
 
       <table align="center" style="padding-left:300px;">
 
@@ -116,6 +135,41 @@
           </th>
        </tr>
 
+       <tr align="left">
+         <th style="padding-bottom:14px;">
+         DOB
+       </th><th></th><th><input style="width:265px; height:30px;" type="date" name="dob"  value="<?php echo $res['dob']; ?>" required/><br>
+           </th>
+        </tr>
+
+        <tr align="left"><th style="padding-bottom:14px; padding-right:5px;">
+          GENDER </th><th></th><th><input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Other</label><br>
+        </th></tr>
+
+        <tr align="left">
+          <th style="padding-bottom:14px;">
+          PARENT PHONE NO</th>
+         <th>
+         </th>
+         <th><input type  ="tel" style="width:265px; height:30px;" name="phone"placeholder="Ten Digits"  maxlength="10"pattern="[0-9]{10}" value="<?php echo $res['parent']; ?>" required/><br>
+            </th>
+         </tr>
+
+         <tr align="left"><th style="padding-bottom:14px; padding-right:5px;">
+         YEAR OF ADMISSION  </th><th></th><th><input type="number" name="yoa" min="2005" max="2021"steps="4"maxlength="4"style="width:265px; height:30px; " value="<?php echo $res['yoa']; ?>" required/><br>
+           </th>
+        </tr>
+
+        <tr align="left"><th style="padding-bottom: 15px;">
+        CGPA </th><th></th><th><input type="number" name="cgpa" min="0" max="10"step="0.01"maxlength="2"style="background-color: white; width:265px; height:30px; "value="<?php echo $res['cgpa']; ?>"required/><br>
+          </th>
+       </tr>
+
 
       <tr align="left">
         <th style="padding-bottom:14px;">
@@ -141,42 +195,10 @@
           </th>
        </tr>
 
-        <tr align="left"><th style="padding-bottom:14px; padding-right:5px;">
-        YEAR OF ADMISSION  </th><th></th><th><input type="number" name="yoa" min="2005" max="2021"steps="4"maxlength="4"style="width:265px; height:30px; " value="<?php echo $res['yoa']; ?>" required/><br>
-          </th>
-       </tr>
-
-
-      <tr align="left">
-        <th style="padding-bottom:14px;">
-        PARENT PHONE NO</th>
-       <th>
-       </th>
-       <th><input type  ="tel" style="width:265px; height:30px;" name="phone"placeholder="Ten Digits"  maxlength="10"pattern="[0-9]{10}" value="<?php echo $res['parent']; ?>" required/><br>
-          </th>
-       </tr>
-
-
-      <tr align="left">
-        <th style="padding-bottom:14px;">
-        DOB
-      </th><th></th><th><input style="width:265px; height:30px;" type="date" name="dob"  value="<?php echo $res['dob']; ?>" required/><br>
-          </th>
-       </tr>
-
-      <tr align="left"><th style="padding-bottom:14px; padding-right:5px;">
-        GENDER </th><th></th><th><input type="radio" id="male" name="gender" value="male" required>
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label>
-        <input type="radio" id="other" name="gender" value="other">
-        <label for="other">Other</label><br>
-      </th></tr>
 
 
 
-
-      </table>
+    </table>
 
 
     <i><h5 style="color:red; text-align: center; padding:25px; padding-bottom:0px;">*All fields are mandatory</h5></i>
@@ -184,28 +206,6 @@
     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
     <center><button name="Update" class="button button1">Update</button></center>
     </form>
-    <?php
-    if(isset($_POST['Update'])){
-        $fname=$_POST['fname'];
-        $lname=$_POST['lname'];
-        $report=$_POST['report'];
-        $yoa=$_POST['yoa'];
-        $phone=$_POST['phone'];
-        $dob=$_POST['dob'];
-        $gender=$_POST['gender'];
-
-
-        $updatequery="UPDATE `student` SET `name`='$fname',`last_name`='$lname',`report`='$report',`yoa`='$yoa',`parent`='$phone',`dob`='$dob',`gender`='$gender' WHERE `id`=$id";
-
-
-
-    $query=mysqli_query($conn,$updatequery);
-    header("location: viewstudenttable.php");
-    }
-    ?>
-    <?php
-    }
-    ?>
 
 
     </div >
