@@ -221,7 +221,11 @@ if(isset($_POST['savestudent'])){
     move_uploaded_file($_FILES['img']['tmp_name'], "simages/".$image_name);
 
     $insertquery="insert into student(`student_id`, `name`, `last_name`,`dob`, `gender`, `parent`,  `yoa`, `cgpa`,`report`,`file`)
+<<<<<<< HEAD
     VALUES ('$stdid', '$fname','$lname','$dob','$gender','$phone','$yoa','$cgpa','$report','$image_name')";
+=======
+    VALUES ('$stdid', '$fname','$lname','$dob','$gender',,'$phone',,'$yoa','$cgpa','$report','$image_name')";
+>>>>>>> 850d7905771f1cff57b4d4930cc2b944ccc93794
 
 
 
