@@ -108,6 +108,41 @@
              </th>
           </tr>
 
+          <tr align="left">
+            <th style="padding-bottom: 15px;">
+            DOB
+          </th><th></th><th><input style="background-color: white; width:265px; height:30px;" type="date" max="2017-06-01"name="dob" required/><br>
+              </th>
+           </tr>
+
+           <tr align="left"><th style="padding-bottom: 15px;">
+             GENDER </th><th></th><th><input type="radio" id="Male" name="gender" value="Male" required>
+             <label for="Male">Male</label>
+             <input type="radio" id="Female" name="gender" value="Female">
+             <label for="Female">Female</label>
+             <input type="radio" id="Other" name="gender" value="Other">
+             <label for="Other">Other</label><br>
+           </th></tr>
+
+           <tr align="left">
+             <th style="padding-bottom: 15px;">
+             PARENT PHONE NO</th>
+            <th>
+            </th>
+            <th><input type  ="tel" style="background-color: white; width:265px; height:30px;" name="phone"placeholder="Ten Digits"  maxlength="10"pattern="[0-9]{10}" required/><br>
+               </th>
+            </tr>
+
+
+                       <tr align="left"><th style="padding-bottom: 15px;">
+                       YEAR OF ADMISSION  </th><th></th><th><input type="number" name="yoa" placeholder="Choose the Year" min="2005" max="2021"step="1"maxlength="4"style="background-color: white; width:265px; height:30px; "required/><br>
+                         </th>
+                      </tr>
+
+                      <tr align="left"><th style="padding-bottom: 15px;">
+                      CGPA </th><th></th><th><input type="number" name="cgpa" placeholder="eg : 8.55,9.00" min="0" max="10"step="0.01"maxlength="2"style="background-color: white; width:265px; height:30px; "required/><br>
+                        </th>
+                     </tr>
 
          <tr align="left">
            <th style="padding-bottom: 15px;">
@@ -132,42 +167,8 @@
              </th>
           </tr>
 
-          <tr align="left"><th style="padding-bottom: 15px;">
-          CGPA </th><th></th><th><input type="number" name="cgpa" placeholder="eg : 8.55,9.00" min="0" max="10"step="0.01"maxlength="2"style="background-color: white; width:265px; height:30px; "required/><br>
-            </th>
-         </tr>
-
-           <tr align="left"><th style="padding-bottom: 15px;">
-           YEAR OF ADMISSION  </th><th></th><th><input type="number" name="yoa" placeholder="Choose the Year" min="2005" max="2021"step="1"maxlength="4"style="background-color: white; width:265px; height:30px; "required/><br>
-             </th>
-          </tr>
 
 
-         <tr align="left">
-           <th style="padding-bottom: 15px;">
-           PARENT PHONE NO</th>
-          <th>
-          </th>
-          <th><input type  ="tel" style="background-color: white; width:265px; height:30px;" name="phone"placeholder="Ten Digits"  maxlength="10"pattern="[0-9]{10}" required/><br>
-             </th>
-          </tr>
-
-
-         <tr align="left">
-           <th style="padding-bottom: 15px;">
-           DOB
-         </th><th></th><th><input style="background-color: white; width:265px; height:30px;" type="date" max="2017-06-01"name="dob" required/><br>
-             </th>
-          </tr>
-
-         <tr align="left"><th style="padding-bottom: 15px;">
-           GENDER </th><th></th><th><input type="radio" id="Male" name="gender" value="Male" required>
-           <label for="Male">Male</label>
-           <input type="radio" id="Female" name="gender" value="Female">
-           <label for="Female">Female</label>
-           <input type="radio" id="Other" name="gender" value="Other">
-           <label for="Other">Other</label><br>
-         </th></tr>
 
 
          <tr align="left">
@@ -207,20 +208,20 @@ if(isset($_POST['savestudent'])){
     $stdid=$_POST['stdid'];
     $fname=$_POST['fname'];
     $lname=$_POST['lname'];
-    $report=$_POST['report'];
-    $cgpa=$_POST['cgpa'];
-    $yoa=$_POST['yoa'];
-    $phone=$_POST['phone'];
     $dob=$_POST['dob'];
     $gender=$_POST['gender'];
+    $phone=$_POST['phone'];
+    $yoa=$_POST['yoa'];
+    $cgpa=$_POST['cgpa'];
+    $report=$_POST['report'];
     $img=$_POST['img'];
 
     $image_name = $_FILES['img']['name'] ;
 
     move_uploaded_file($_FILES['img']['tmp_name'], "simages/".$image_name);
 
-    $insertquery="insert into student(`student_id`, `name`, `last_name`, `report`,`cgpa`, `yoa`, `parent`, `dob`, `gender`, `file`)
-    VALUES ('$stdid', '$fname','$lname','$report','$cgpa','$yoa','$phone','$dob','$gender','$image_name')";
+    $insertquery="insert into student(`student_id`, `name`, `last_name`,`dob`, `gender`, `parent`,  `yoa`, `cgpa`,`report`,`file`)
+    VALUES ('$stdid', '$fname','$lname','$dob','$gender',,'$phone',,'$yoa','$cgpa','$report','$image_name')";
 
 
 
