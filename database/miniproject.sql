@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `student` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 INSERT INTO `student` (`id`, `student_id`, `name`, `last_name`, `dob`, `gender`, `parent`, `yoa`, `cgpa`,`report`, `file`) VALUES
-(1, 'AS01-2341', 'Ron', 'Weasley', '1993-05-05','Male','08138652645', '2012', '9.8','hard-working', 'ronweasley.jpg');
+(1, 'AS01-2341', 'Ron', 'Weasley', '1993-05-05','Male','08138652645', '2012', '9.8','Good', 'ronweasley.jpg');
 
 ALTER TABLE `student`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
