@@ -99,24 +99,24 @@
 												 color: #7d7d7d;"> <?php echo $res['name']; ?> <?php echo $res['last_name']; ?></td>
 								 </tr>
 								 <tr>
-								 <td> Gender:  </td>
-								 <td style="padding: 10px;
-												 color: #7d7d7d;"> <?php echo $res['gender']; ?></td>
-								 </tr>
-								 <tr>
 								 <td> D.O.B:  </td>
 								 <td style="padding: 10px;
 												 color: #7d7d7d;"> <?php echo $res['dob']; ?></td>
 								 </tr>
 								 <tr>
-								 <td> Admission Year :  </td>
+								 <td> Gender:  </td>
 								 <td style="padding: 10px;
-												 color: #7d7d7d;"> <?php echo $res['yoa']; ?></td>
+												 color: #7d7d7d;"> <?php echo $res['gender']; ?></td>
 								 </tr>
 								 <tr>
 								 <td> Parent Phone:  </td>
 								 <td style="padding: 10px;
 												 color: #7d7d7d;"> <?php echo $res['parent']; ?></td>
+								 </tr>
+								 <tr>
+								 <td> Admission Year :  </td>
+								 <td style="padding: 10px;
+												 color: #7d7d7d;"> <?php echo $res['yoa']; ?></td>
 								 </tr>
 								 <tr>
 									 <td> CGPA:  </td>
