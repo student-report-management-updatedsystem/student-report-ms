@@ -20,7 +20,7 @@
                 <span>Dashboard</span></a>
             </li>
             <li>
-              <a href="src/viewstudenttable.php"><span class="las la-user-graduate"></span>
+              <a href="src/viewstudenttable.php" class="view"><span class="las la-user-graduate"></span>
                 <span>View</span></a>
             </li>
             <li>
@@ -30,6 +30,24 @@
             <li>
               <a href="index.php"><span class="las la-user-minus"></span>
                 <span>Logout</span></a>
+            </li>
+            <li>
+               <div id="clock">
+                 <div id="time">
+                   <div>
+                     <span id="hour">00</span>
+                     <span>hours</span>
+                   </div>
+                   <div>
+                     <span id="minute">00</span>
+                     <span>minutes</span>
+                   </div>
+                   <div>
+                     <span id="second">00</span>
+                     <span>seconds</span>
+                   </div>
+                 </div>
+               </div>
             </li>
           </ul>
         </div>
@@ -94,6 +112,21 @@
 
          </main>
       </div>
+       <script>
+          var hours = document.getElementById("hour");
+          var minutes = document.getElementById("minute");
+          var seconds = document.getElementById("second");
+          function clock()
+          {
+            var h = new Date().getHours();
+            var m = new Date().getMinutes();
+            var s = new Date().getSeconds();
 
+            hours.innerHTML = h;
+            minutes.innerHTML = m;
+            seconds.innerHTML = s;
+          }
+          var interval = setInterval( clock, 1000);
+       </script>
   </body>
 </html>

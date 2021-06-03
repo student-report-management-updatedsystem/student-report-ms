@@ -125,3 +125,51 @@ main{
 .student_list{
   padding-bottom: 20px;
 }
+#clock{
+  padding-top: 15%;
+  padding-left: 6%;
+}
+#clock #time{
+  display: flex;
+  transform: scale(0.9);
+}
+#clock #time div{
+  position: relative;
+  margin: 0 5px;
+}
+#clock #time div span{
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 65px;
+  background: #0C4271;
+  color: #fff;
+  display: flex;
+  font-weight: 300;
+  text-align: center;
+  justify-content: center;
+  font-size: 2.5em;
+  padding-top: 10px;
+  z-index: 10;
+  box-shadow: 0 0 1px rgba(0,0,0,0.2);
+}
+#clock #time div span:nth-child(2)
+{
+  height: 30px;
+  font-size: 0.6em;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  z-index: 9;
+  box-shadow: none;
+  background: #022E57;
+  text-transform: uppercase;
+  color: #fff;
+  padding-bottom: 15px;
+}
+#clock #time div:last-child span{
+  background: #ff006a;
+}
+#clock #time div:last-child span:nth-child(2){
+  background: #ec0062;
+  color: #fff;
+}
