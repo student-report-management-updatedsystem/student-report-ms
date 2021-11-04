@@ -97,7 +97,7 @@
                  <?php
 
                  include 'auth.php';
-                 $selectquery =" select * from `kg-1` ORDER BY name ASC";
+                 $selectquery =" select * from `kg-2` ORDER BY name ASC";
                  $query = mysqli_query($conn,$selectquery);
 
                    while($res=mysqli_fetch_array($query))
@@ -109,9 +109,9 @@
                          <td><?php echo $res['parent'];?></td>
                          <td><?php echo $res['gender'];?></td>
                          <td><?php echo $res['class'];?></td>
-                         <td><a href="editstudent.php?id=<?php echo $res['id']; ?>"<i class="fa fa-edit" aria-hidden="true"></i></td>
-                           <td><a href="deletestudent.php?id=<?php echo $res['id']; ?>"<i class="fa fa-trash" aria-hidden="true"></i></td>
-                         <td><a href="student.php?id=<?php echo $res['id']; ?>"><i class="fa fa-id-badge" aria-hidden="true"></i></td>
+                         <td><a href="editstudent2.php?id=<?php echo $res['id']; ?>"<i class="fa fa-edit" aria-hidden="true"></i></td>
+                           <td><a href="deletestudent2.php?id=<?php echo $res['id']; ?>"<i class="fa fa-trash" aria-hidden="true"></i></td>
+                         <td><a href="student2.php?id=<?php echo $res['id']; ?>"><i class="fa fa-id-badge" aria-hidden="true"></i></td>
 
                          </tr>
 

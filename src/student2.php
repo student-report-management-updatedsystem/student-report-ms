@@ -18,8 +18,8 @@
 	include('auth.php');
 	$id=$_GET['id'];
 
-
-  $selectquery =" select * from `kg-1` where id= $id";
+ 
+  $selectquery =" select * from `kg-2` where id= $id";
   $query = mysqli_query($conn,$selectquery);
 
   while($res=mysqli_fetch_array($query))

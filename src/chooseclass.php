@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Panel Page</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="panel.css">
+    <link rel="stylesheet" href="chooseclass.css">
   </head>
   <body>
 
@@ -20,11 +20,11 @@
                 <span>Dashboard</span></a>
             </li>
             <li>
-              <a href="src/chooseclass.php" class="view"><span class="las la-user-graduate"></span>
+              <a href="chooseclass.php" class="view"><span class="las la-user-graduate"></span>
                 <span>View</span></a>
             </li>
             <li>
-              <a href="src/addstudent.php"><span class="las la-graduation-cap"></span>
+              <a href="addstudent.php"><span class="las la-graduation-cap"></span>
                 <span>Add</span></a>
             </li>
             <li>
@@ -81,32 +81,26 @@
 
          <main>
             <div class="cards">
-              <a href="src/chooseclass.php" style="color:black;"><div class="card-single card-single-1">
+              <a href="viewstudenttable.php" style="color:black;"><div class="card-single card-single-1">
                 <div>
-                  <h1>View</h1>
-                  <span>Students</span>
+                  <h1>KG-1</h1>
+                  <span>CLASS</span>
                 </div>
                 <div>
                   <span class="l-1 las la-users"></span>
                 </div>
               </div></a>
-              <a href="src/addstudent.php" style="color: black;"><div class="card-single card-single-2">
+              <a href="viewstudenttable2.php" style="color: black;"><div class="card-single card-single-2">
                 <div>
-                  <h1>Add</h1>
-                  <span >Students</span>
+                  <h1>KG-2</h1>
+                  <span >CLASS</span>
                 </div>
                 <div>
-                  <span class="l-2 las la-graduation-cap"></span>
+                  <span class="l-2 las la-users"></span>
                 </div>
               </div></a>
-              <a href="index.php" style="color:black;"><div class="card-single card-single-3">
-                <div>
-                  <h1>Logout</h1>
 
-                </div>
-                <div>
-                  <span class="l-3 las la-user-minus"></span>
-                </div>
+
               </div></a>
             </div>
 

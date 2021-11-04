@@ -20,13 +20,14 @@ CREATE TABLE IF NOT EXISTS `kg-1` (
   `gender` varchar(7) NOT NULL,
   `parent` varchar(200) NOT NULL,
   `yoa` varchar(45) NOT NULL,
+  `class` varchar(45) NOT NULL,
   `grade` varchar(45) NOT NULL,
   `report` varchar(2000) NOT NULL,
   `file` varchar(400) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
-INSERT INTO `kg-1` (`id`, `student_id`, `name`, `last_name`, `dob`, `gender`, `parent`, `yoa`, `grade`,`report`, `file`) VALUES
-(1, 'AS01-2341', 'Ron', 'Weasley', '2018-05-05','Male','8138652645', '2021', 'A','Good', 'ronweasley.jpg');
+INSERT INTO `kg-1` (`id`, `student_id`, `name`, `last_name`, `dob`, `gender`, `parent`, `yoa`, `class`, `grade`, `report`, `file`) VALUES
+(1, 'AS01-2341', 'Ron', 'Weasley', '2018-05-05','Male','8138652645', '2021', 'kg-1', 'A','Good', 'ronweasley.jpg');
 
 ALTER TABLE `kg-1`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
@@ -40,13 +41,14 @@ CREATE TABLE IF NOT EXISTS `kg-2` (
   `gender` varchar(7) NOT NULL,
   `parent` varchar(200) NOT NULL,
   `yoa` varchar(45) NOT NULL,
+  `class` varchar(45) NOT NULL,
   `grade` varchar(45) NOT NULL,
   `report` varchar(2000) NOT NULL,
   `file` varchar(400) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
-INSERT INTO `kg-2` (`id`, `student_id`, `name`, `last_name`, `dob`, `gender`, `parent`, `yoa`, `grade`,`report`, `file`) VALUES
-(1, 'AS02-7621', 'Hermoine', 'Granger', '2017-05-05','Male','9678652645', '2021', 'A+','Good', 'ronweasley.jpg');
+INSERT INTO `kg-2` (`id`, `student_id`, `name`, `last_name`, `dob`, `gender`, `parent`, `yoa`, `class`, `grade`, `report`, `file`) VALUES
+(1, 'AS02-7621', 'Hermoine', 'Granger', '2017-05-05','Male','9678652645', '2021', 'kg-2', 'A+','Good', 'ronweasley.jpg');
 
 ALTER TABLE `kg-2`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;

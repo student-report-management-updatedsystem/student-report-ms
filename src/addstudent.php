@@ -20,7 +20,7 @@
             <span>Dashboard</span></a>
         </li>
         <li>
-          <a href="../src/viewstudenttable.php"><span class="las la-user-graduate"></span>
+          <a href="chooseclass.php"><span class="las la-user-graduate"></span>
             <span>View</span></a>
         </li>
         <li>
@@ -92,7 +92,6 @@
          <center>
 
          <table align="center">
-
            <tr align="left">
              <th style="padding-bottom: 15px;">
                   <label for="stdid">STUDENT ID</label>
@@ -104,7 +103,7 @@
              </th>
            </tr>
 
-
+<!--- FIRST NAME-->
            <tr align="left">
              <th style="padding-bottom: 15px;">
                   <label for="fname">FIRST NAME</label>
@@ -115,7 +114,7 @@
              </th>
            </tr>
 
-
+<!--- LAST NAME-->
            <tr align="left">
              <th style="padding-bottom: 15px;">
                   <label for="lname">LAST NAME</label>
@@ -126,12 +125,16 @@
              </th>
           </tr>
 
+<!--- DOB-->
+
           <tr align="left">
             <th style="padding-bottom: 15px;">
             DOB
           </th><th></th><th><input style="background-color: white; width:265px; height:30px;" type="date" max="2017-06-01"name="dob" required/><br>
               </th>
            </tr>
+
+<!--GENDER-->
 
            <tr align="left"><th style="padding-bottom: 15px;">
              GENDER </th><th></th><th><input type="radio" id="Male" name="gender" value="Male" required>
@@ -142,6 +145,8 @@
              <label for="Other">Other</label><br>
            </th></tr>
 
+<!--PHONE NUMBER-->
+
            <tr align="left">
              <th style="padding-bottom: 15px;">
              PARENT PHONE NO</th>
@@ -151,17 +156,60 @@
                </th>
             </tr>
 
+<!--CLASS-->
 
-                       <tr align="left"><th style="padding-bottom: 15px;">
-                       YEAR OF ADMISSION  </th><th></th><th><input type="number" name="yoa" placeholder="Choose the Year" min="2005" max="2021"step="1"maxlength="4"style="background-color: white; width:265px; height:30px; "required/><br>
-                         </th>
-                      </tr>
+<tr align="left">
+<th style="padding-bottom: 15px;">
+<label for="class">CLASS</label>
+</th><th></th>
+<th><select name="class" placeholder="Choose from the options" id="class"
+style=
+      "background-color: white; width:95%;padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;" required>
+<option value="" disabled selected></option>
+<option value="kg-1">KG-1</option>
+<option value="kg-2">KG-2</option>
 
-                      <tr align="left"><th style="padding-bottom: 15px;">
-                      CGPA </th><th></th><th><input type="number" name="cgpa" placeholder="eg : 8.55,9.00" min="0" max="10"step="0.01"maxlength="2"style="background-color: white; width:265px; height:30px; "required/><br>
-                        </th>
-                     </tr>
+          </select>
+        <br>
+            </th>
+</tr>
 
+<!--YOA-->
+             <tr align="left"><th style="padding-bottom: 15px;">
+             YEAR OF ADMISSION  </th><th></th><th><input type="number" name="yoa" placeholder="Choose the Year" min="2005" max="2021"step="1"maxlength="4"style="background-color: white; width:265px; height:30px; "required/><br>
+               </th>
+              </tr>
+
+<!--GRADE-->
+
+              <tr align="left">
+              <th style="padding-bottom: 15px;">
+              <label for="grade">GRADE</label>
+              </th><th></th>
+              <th><select name="grade" placeholder="Choose from the options" id="grade"
+              style=
+                    "background-color: white; width:95%;padding: 15px;
+                    margin: 5px 0 22px 0;
+                    display: inline-block;
+                    border: none;" required>
+              <option value="" disabled selected></option>
+              <option value="A+">A+</option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D+">D+</option>
+              <option value="D">D</option>
+                        </select>
+                      <br>
+                          </th>
+             </tr>
+
+<!--REPORT-->
          <tr align="left">
            <th style="padding-bottom: 15px;">
              <label for="report">REPORT</label>
@@ -186,7 +234,7 @@
           </tr>
 
 
-
+<!--PHOTO-->
 
 
          <tr align="left">
@@ -212,8 +260,11 @@
 
          </div>
          </div >
-
      </main>
+
+
+
+
      <script>
         var hours = document.getElementById("hour");
         var minutes = document.getElementById("minute");
@@ -233,31 +284,41 @@
 </body>
 </html>
 
+
+
+<!--PHP CODE-->
 <?php
 
 include 'auth.php';
 
-if(isset($_POST['savestudent'])){
+if(isset($_POST['savestudent']))
+{
     $stdid=$_POST['stdid'];
     $fname=$_POST['fname'];
     $lname=$_POST['lname'];
     $dob=$_POST['dob'];
     $gender=$_POST['gender'];
     $phone=$_POST['phone'];
+    $class=$_POST['class'];
     $yoa=$_POST['yoa'];
-    $cgpa=$_POST['cgpa'];
+    $grade=$_POST['grade'];
     $report=$_POST['report'];
     $img=$_POST['img'];
-
     $image_name = $_FILES['img']['name'] ;
 
     move_uploaded_file($_FILES['img']['tmp_name'], "simages/".$image_name);
 
-    $insertquery="insert into student(`student_id`, `name`, `last_name`,`dob`, `gender`, `parent`,  `yoa`, `cgpa`,`report`,`file`)
+if( $class =="kg-1")
+{
+    $insertquery="INSERT INTO `kg-1`(`student_id`, `name`, `last_name`,`dob`, `gender`, `parent`, `yoa`,`class`, `grade`,`report`,`file`)
+    VALUES ('$stdid', '$fname','$lname','$dob','$gender','$phone','$yoa','$class','$grade','$report','$image_name')";
+}
+else {
 
-    VALUES ('$stdid', '$fname','$lname','$dob','$gender','$phone','$yoa','$cgpa','$report','$image_name')";
+  $insertquery="INSERT INTO `kg-2`(`student_id`, `name`, `last_name`,`dob`, `gender`, `parent`, `yoa`,`class`, `grade`,`report`,`file`)
+  VALUES ('$stdid', '$fname','$lname','$dob','$gender','$phone','$yoa','$class','$grade','$report','$image_name')";
 
-
+}
 
 mysqli_query($conn,$insertquery);
 

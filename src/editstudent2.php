@@ -93,7 +93,7 @@
 
 
     $id=$_GET['id'];
-    $selectquery = "select * from `kg-1` where id=$id";
+    $selectquery = "select * from `kg-2` where id=$id";
 
     $query = mysqli_query($conn,$selectquery);
 
@@ -109,7 +109,7 @@
       $grade=$_POST['grade'];
       $report=$_POST['report'];
 
-        $updatequery="UPDATE `kg-1` SET `name`='$fname',`last_name`='$lname',`dob`='$dob',`gender`='$gender',`parent`='$phone',`yoa`='$yoa',`grade`='$grade',`report`='$report' WHERE `id`=$id";
+        $updatequery="UPDATE `kg-2` SET `name`='$fname',`last_name`='$lname',`dob`='$dob',`gender`='$gender',`parent`='$phone',`yoa`='$yoa',`grade`='$grade',`report`='$report' WHERE `id`=$id";
 
 
 

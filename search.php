@@ -23,7 +23,7 @@
               <span>Dashboard</span></a>
           </li>
           <li>
-            <a href="src/viewstudenttable.php"><span class="las la-user-graduate"></span>
+            <a href="src/chooseclass.php"><span class="las la-user-graduate"></span>
               <span>View</span></a>
           </li>
           <li>
@@ -86,6 +86,7 @@
                       <th>YOA</th>
                       <th>Phone</th>
                       <th>gender</th>
+                      <th>class</th>
                       <th colspan="3">operation</th>
 
                     </tr>
@@ -103,7 +104,8 @@ $conn= new mysqli("localhost","root","","miniproject");
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
       }
 
-$res = mysqli_query($conn, "SELECT * FROM student  WHERE name LIKE '{$name}%' OR last_name LIKE '{$name}%' ORDER BY name ASC");
+
+$res = mysqli_query($conn, "SELECT * FROM `kg-1` WHERE name LIKE '{$name}%' OR last_name LIKE '{$name}%' ORDER BY name ASC");
 
 
 while ($row = mysqli_fetch_array($res))
@@ -116,12 +118,13 @@ while ($row = mysqli_fetch_array($res))
 <td><?php echo $row['yoa'];?></td>
 <td><?php echo $row['parent'];?></td>
 <td><?php echo $row['gender'];?></td>
+<td><?php echo $row['class'];?></td>
 <td><a href="src/editstudent.php?id=<?php echo $row['id']; ?>"><i class="fa fa-edit" aria-hidden="true"></i></td>
 <td><a href="src/deletestudent.php?id=<?php echo $row['id']; ?>"><i class="fa fa-trash" aria-hidden="true"></i></td>
 <td><a href="src/student.php?id=<?php echo $row['id']; ?>"><i class="fa fa-id-badge" aria-hidden="true"></i></td>
 </tr>
 
-
+}
 
 
  <?php
