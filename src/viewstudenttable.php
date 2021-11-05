@@ -20,13 +20,21 @@
             <span>Dashboard</span></a>
         </li>
         <li>
-          <a href="chooseclass.php"><span class="las la-user-graduate"></span>
-            <span>View</span></a>
-        </li>
-        <li>
-          <a href="addstudent.php"><span class="las la-graduation-cap"></span>
-            <span>Add</span></a>
-        </li>
+              <a href="src/chooseclass.php" class="view"><span class="las la-user-graduate"></span>
+                <span>View Students</span></a>
+            </li>
+            <li>
+              <a href="src/addstudent.php"><span class="las la-graduation-cap"></span>
+                <span>Add Students</span></a>
+            </li>
+            <li>
+              <a href="src/viewteachertable.php" class="view"><span class="las la-user-graduate"></span>
+                <span>View Teachers</span></a>
+            </li>
+            <li>
+              <a href="src/viewteachertable.php" class="view"><span class="las la-user-graduate"></span>
+                <span>View HOD</span></a>
+            </li>
         <li>
           <a href="../index.php"><span class="las la-user-minus"></span>
             <span>Logout</span></a>
