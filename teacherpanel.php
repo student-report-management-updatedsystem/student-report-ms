@@ -24,8 +24,8 @@
                 <span>View Students</span></a>
             </li>
             <li>
-              <a href="src/viewteachertable.php" class="view"><span class="las la-user-graduate"></span>
-                <span>View Teachers</span></a>
+              <a href="src/addstudent.php"><span class="las la-graduation-cap"></span>
+                <span>Add Students</span></a>
             </li>
             <li>
               <a href="index.php"><span class="las la-user-minus"></span>
@@ -90,13 +90,13 @@
                   <span class="l-1 las la-users"></span>
                 </div>
               </div></a>
-              <a href="src/chooseclass.php" style="color:black;"><div class="card-single card-single-1">
+              <a href="src/addstudent.php" style="color: black;"><div class="card-single card-single-2">
                 <div>
-                  <h1>View</h1>
-                  <span>Teachers</span>
+                  <h1>Add</h1>
+                  <span >Students</span>
                 </div>
                 <div>
-                  <span class="l-1 las la-users"></span>
+                  <span class="l-2 las la-graduation-cap"></span>
                 </div>
               </div></a>
               <a href="index.php" style="color:black;"><div class="card-single card-single-3">
