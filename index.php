@@ -80,38 +80,6 @@ few seconds.</p>
         </div>
       </div>
   </section>
-  <section id="features">
-    <h2 class="feature-head">Features</h2>
-    <div class="container-2">
-      <div class="box b-1">
-        <div class="icon">
-          <img class="i-1" src="https://img.icons8.com/wired/64/000000/students.png"/>
-        </div>
-        <div class="content">
-          <h3>View Student</h3>
-          <p class="feature-content">Details of the students including profile picture can be viewed.</p>
-        </div>
-      </div>
-      <div class="box b-2">
-        <div class="icon">
-          <img class="i-1" src="https://img.icons8.com/dotty/80/000000/student-registration.png"/>
-        </div>
-        <div class="content">
-          <h3>Add Student</h3>
-          <p class="feature-content">New students can be added using this feature.</p>
-        </div>
-      </div>
-      <div class="box b-3">
-        <div class="icon">
-          <img class="i-1" src="https://img.icons8.com/wired/64/000000/remove-user-male.png"/>
-        </div>
-        <div class="content">
-          <h3>Delete Student</h3>
-          <p class="feature-content">Records of the added student can be removed.</p>
-        </div>
-      </div>
-    </div>
-  </section>
   <footer>
         <div class="footer-content">
           <h5 class="f-c-1">Project Done By </h5>
@@ -137,8 +105,15 @@ few seconds.</p>
          <div class="close">+</div>
           <img class="pic_2" src="images/pic_2.png" alt="">
           <form method="POST">
+            <select class="form-select" aria-label="Default select example">
+             <option selected>User</option>
+             <option name="admin" value="Admin">Admin</option>
+             <option name="hod" value="hod">HOD</option>
+             <option name="teacher" value="teacher">Teacher</option>
+             <option name="student" value="student">Student</option>
+           </select>
             <input type="text" placeholder="Name" name="AdminName" >
-            <input type="password" placeholder="Password" name="AdminPassword">
+            <input type="password" placeholder="Password" name="AdminPassword">           
             <button type="submit" class="button" name="SignIn">Sign In</button>
           </form>
        </div>

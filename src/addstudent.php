@@ -317,12 +317,17 @@ else {
 
   $insertquery="INSERT INTO `kg-2`(`student_id`, `name`, `last_name`,`dob`, `gender`, `parent`, `yoa`,`class`, `grade`,`report`,`file`)
   VALUES ('$stdid', '$fname','$lname','$dob','$gender','$phone','$yoa','$class','$grade','$report','$image_name')";
-
 }
 
 mysqli_query($conn,$insertquery);
 
-echo '<script>alert("New student added successfully")</script>';
+$insertqueryy="INSERT INTO `roles` (`role`, `userName`, `password`) VALUES ('student', '$fname', '$dob')";
+if(mysqli_query($conn,$insertqueryy))
+{
+  echo '<script>alert("New student added successfully")</script>';
+}
+
+
 
 }
 

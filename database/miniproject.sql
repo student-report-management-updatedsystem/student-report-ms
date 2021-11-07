@@ -1,36 +1,17 @@
 
-CREATE TABLE IF NOT EXISTS `admin` (
+CREATE TABLE IF NOT EXISTS `user` (
   `username` varchar(55) NOT NULL,
   `password` varchar(55) NOT NULL
 
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
-INSERT INTO `admin` (`username`, `password`) VALUES
+INSERT INTO `user` (`username`, `password`) VALUES
 ('admin', '123');
 
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`username`);
+ALTER TABLE `user`
+ADD PRIMARY KEY (`username`);
 
-CREATE TABLE IF NOT EXISTS `user` (
-  `username` varchar(55) NOT NULL,
-  `password` varchar(55) NOT NULL,
-  `role` varchar(55) NOT NULL
 
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
-INSERT INTO `user` (`username`, `password`,`role`) VALUES
-('admin', '123','admin');
-INSERT INTO `user` (`username`, `password`,`role`) VALUES
-('usha-01', '05-07-1974','teacher');
-INSERT INTO `user` (`username`, `password`,`role`) VALUES
-('teena-71', '11-09-1972','teacher');
-INSERT INTO `user` (`username`, `password`,`role`) VALUES
-('AS01-2341', '2018-05-05','student');
-INSERT INTO `user` (`username`, `password`,`role`) VALUES
-('AS02-7621', '2017-05-05','student');
-
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`username`);
 
 CREATE TABLE IF NOT EXISTS `kg-1` (
   `id` int(11) NOT NULL PRIMARY KEY,
@@ -83,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `teacher` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 INSERT INTO `teacher` (`id`, `username`, `password`, `name`, `class`) VALUES (1, 'usha-01', '05-07-1974', 'Usha Pramod', 'KG-1');
-INSERT INTO `teacher` (`id`, `username`, `password`, `name`, `class`) VALUES (2, 'teena-71', '11-09-1972', 'Usha Pramod', 'KG-2');
+INSERT INTO `teacher` (`id`, `username`, `password`, `name`, `class`) VALUES (2, 'teena-71', '11-09-1972', 'Teena John', 'KG-2');
 
 CREATE TABLE IF NOT EXISTS `HOD` (
   `id` int(11) NOT NULL PRIMARY KEY,
@@ -93,3 +74,14 @@ CREATE TABLE IF NOT EXISTS `HOD` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 INSERT INTO `HOD` (`id`, `username`, `password`, `name`) VALUES (1, 'mangala-01', '1961-01-08', 'Mangala Pillai');
+
+CREATE TABLE IF NOT EXISTS `roles` (
+  `role` varchar(45) NOT NULL,
+  `userName` varchar(220) NOT NULL,
+  `password` varchar(45) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('admin', 'admin', '123');
+INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('hod', 'HOD', '123');
+INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('teacher', 'Usha Pramod', '05-07-1974');
+INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('teacher', 'Teena John', '11-09-1972');
