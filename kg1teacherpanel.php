@@ -63,12 +63,7 @@
              Dashboard
            </h2>
 
-           <form class="search" action="search.php" method="post" >
-           <div class="search-wrapper">
-           <button type="submit" ><i class="las la-search"></i></button>
-           <input type="text" name="valueToSearch" placeholder="Search Here"required/></br>
-            </div>
-          </form>
+
 
            <div class="user-wrapper">
              <img src="https://img.icons8.com/pastel-glyph/64/000000/user-male--v1.png" width="40px" height="40px"/>
