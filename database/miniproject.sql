@@ -78,10 +78,14 @@ INSERT INTO `HOD` (`id`, `username`, `password`, `name`) VALUES (1, 'mangala-01'
 CREATE TABLE IF NOT EXISTS `roles` (
   `role` varchar(45) NOT NULL,
   `userName` varchar(220) NOT NULL,
-  `password` varchar(45) NOT NULL
+  `password` varchar(45) NOT NULL,
+  `class` varchar(45)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
-INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('admin', 'admin', '123');
-INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('hod', 'Priya Menon', '123');
-INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('KG-1 Teacher', 'usha-01', '05-07-1974');
-INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('KG-2 Teacher', 'teena-71', '11-09-1972');
+INSERT INTO `roles` (`role`, `username`, `password`,`class`) VALUES ('admin', 'admin', '123',NULL);
+INSERT INTO `roles` (`role`, `username`, `password`,`class`) VALUES ('hod', 'Priya Menon', '123',NULL);
+INSERT INTO `roles` (`role`, `username`, `password`,`class`) VALUES ('KG-1 Teacher', 'usha-01', '05-07-1974','kg-1');
+INSERT INTO `roles` (`role`, `username`, `password`,`class`) VALUES ('KG-2 Teacher', 'teena-71', '11-09-1972','kg-2');
+INSERT INTO `roles` (`role`, `username`, `password`,`class`) VALUES ('student', 'AS01-2341', '2018-05-05','kg-1');
+INSERT INTO `roles` (`role`, `username`, `password`,`class`) VALUES ('student', 'AS02-7621', '2017-05-05','kg-2');
+
