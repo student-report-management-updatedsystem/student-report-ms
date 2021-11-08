@@ -5,6 +5,8 @@
    $useradmin=$_POST['AdminName'];
    $passwordadmin=$_POST['AdminPassword'];
    $role = $_POST['role'];
+   session_start();
+   $username = mysqli_real_escape_string($db, $_POST['username']);
    $sql= "select * from roles where userName='".$useradmin."' and password='".$passwordadmin."' and role='".$role."'";
    $query= mysqli_query($conn,$sql);
    if(mysqli_num_rows($query)==1){

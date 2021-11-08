@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="panel.css">
   </head>
   <body>
-
       <div class="sidebar">
         <div class="sidebar-brand">
           <h2><span class="lab la-accusoft"></span> ABC School</h2>
@@ -68,9 +67,8 @@
 
            <div class="user-wrapper">
              <img src="https://img.icons8.com/pastel-glyph/64/000000/user-male--v1.png" width="40px" height="40px"/>
-             <div>
-               <h4 id="Name"></h4>
-               <script type="text/javascript" src="testUserName.js"></script>
+             <div>             
+               <span id="Name"></span>
                <small>Student</small>
              </div>
            </div>
