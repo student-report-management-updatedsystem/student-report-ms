@@ -83,5 +83,5 @@ CREATE TABLE IF NOT EXISTS `roles` (
 
 INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('admin', 'admin', '123');
 INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('hod', 'mangala-01', '1961-01-08');
-INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('teacher', 'usha-01', '05-07-1974');
-INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('teacher', 'teena-71', '11-09-1972');
+INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('KG-1 Teacher', 'usha-01', '05-07-1974');
+INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('KG-2 Teacher', 'teena-71', '11-09-1972');
