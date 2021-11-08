@@ -73,8 +73,8 @@
            <div class="user-wrapper">
              <img src="https://img.icons8.com/pastel-glyph/64/000000/user-male--v1.png" width="40px" height="40px"/>
              <div>
-               <h4>Arya Anju Anjali Adarsh</h4>
-               <small>Super Admin</small>
+               <h4>Usha Pramod</h4>
+               <small>Teacher</small>
              </div>
            </div>
          </header>
@@ -84,30 +84,24 @@
               <a href="src/chooseclass.php" style="color:black;"><div class="card-single card-single-1">
                 <div>
                   <h1>View</h1>
-                  <span>Students</span>
+                  <span style="font-size: 1rem;">Students</span>
                 </div>
-                <div>
-                  <span class="l-1 las la-users"></span>
-                </div>
-              </div></a>
+              </div>
+            </a>
               <a href="src/addstudent.php" style="color: black;"><div class="card-single card-single-2">
                 <div>
                   <h1>Add</h1>
-                  <span >Students</span>
+                  <span style="font-size: 1rem;">Students</span>
                 </div>
-                <div>
-                  <span class="l-2 las la-graduation-cap"></span>
-                </div>
-              </div></a>
+              </div>
+            </a>
               <a href="index.php" style="color:black;"><div class="card-single card-single-3">
                 <div>
                   <h1>Logout</h1>
 
                 </div>
-                <div>
-                  <span class="l-3 las la-user-minus"></span>
-                </div>
-              </div></a>
+              </div>
+            </a>
             </div>
 
          </main>

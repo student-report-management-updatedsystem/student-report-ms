@@ -4,10 +4,30 @@
  if(isset($_POST['SignIn'])){
    $useradmin=$_POST['AdminName'];
    $passwordadmin=$_POST['AdminPassword'];
-   $sql= "select * from user where username='$useradmin' and password='$passwordadmin' ";
+   $role = $_POST['role'];
+   $sql= "select * from roles where userName='".$useradmin."' and password='".$passwordadmin."' and role='".$role."'";
    $query= mysqli_query($conn,$sql);
    if(mysqli_num_rows($query)==1){
-      header('location: panel.php');
+     if($role=='Admin')
+     {
+       header('location: panel.php');
+     }
+      elseif($role=='hod')
+      {
+        header('location: hodpanel.php');
+      }
+      elseif($role=='KG-1 Teacher')
+      {
+        header('location: kg1teacherpanel.php');
+      }
+      elseif($role=='KG-2 Teacher')
+      {
+        header('location: kg2teacherpanel.php');
+      }
+      elseif($role=='Student')
+      {
+        header('location: studentpanel.php');
+      }
    }
    else{
        echo "wrong input";
@@ -29,6 +49,8 @@
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <script defer src="loginUserName.js"></script>
+
   </head>
   <body>
     <section id="homepage">
@@ -105,16 +127,17 @@ few seconds.</p>
          <div class="close">+</div>
           <img class="pic_2" src="images/pic_2.png" alt="">
           <form method="POST">
-            <select class="form-select" aria-label="Default select example">
+            <select name="role" class="form-select" aria-label="Default select example">
              <option selected>User</option>
-             <option name="admin" value="Admin">Admin</option>
-             <option name="hod" value="hod">HOD</option>
-             <option name="teacher" value="teacher">Teacher</option>
-             <option name="student" value="student">Student</option>
+             <option value="Admin">Admin</option>
+             <option value="hod">HOD</option>
+             <option value="KG-1 Teacher">KG-1 Teacher</option>
+             <option value="KG-2 Teacher">KG-2 Teacher</option>         
+             <option value="Student">Student</option>
            </select>
-            <input type="text" placeholder="Name" name="AdminName" >
+            <input type="text" id="User-name" placeholder="Name" name="AdminName" >
             <input type="password" placeholder="Password" name="AdminPassword">           
-            <button type="submit" class="button" name="SignIn">Sign In</button>
+            <button type="submit" class="button" name="SignIn" onclick="loginFormSubmit();">Sign In</button>
           </form>
        </div>
      </div>
@@ -125,6 +148,14 @@ few seconds.</p>
        document.querySelector('.close').addEventListener("click", function(){
          document.querySelector('.bg-modal').style.display = "none";
        });
+     </script>
+     <script>
+       function loginFormSubmit()
+       {
+         var username=document.getElementById("User-name").value;
+         localStorage.setItem("id", username);
+         return false;
+        }
      </script>
   </body>
 </html>
