@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `kg-2` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 INSERT INTO `kg-2` (`id`, `student_id`, `name`, `last_name`, `dob`, `gender`, `parent`, `yoa`, `class`, `grade`, `report`, `file`) VALUES
-(1, 'AS02-7621', 'Hermoine', 'Granger', '2017-05-05','Male','9678652645', '2021', 'kg-2', 'A+','Good', 'ronweasley.jpg');
+(1, 'AS02-7621', 'Hermoine', 'Granger', '2017-05-05','Male','9678652645', '2021', 'kg-2', 'A+','Good', 'hermione.jpeg');
 
 ALTER TABLE `kg-2`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
