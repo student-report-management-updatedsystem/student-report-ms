@@ -82,6 +82,6 @@ CREATE TABLE IF NOT EXISTS `roles` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('admin', 'admin', '123');
-INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('hod', 'mangala-01', '1961-01-08');
+INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('hod', 'Priya Menon', '123');
 INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('KG-1 Teacher', 'usha-01', '05-07-1974');
 INSERT INTO `roles` (`role`, `username`, `password`) VALUES ('KG-2 Teacher', 'teena-71', '11-09-1972');
