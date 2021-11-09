@@ -11,11 +11,10 @@
         <div class="sidebar-brand">
           <h2><span class="lab la-accusoft"></span> ABC School</h2>
         </div>
-
         <div class="sidebar-menu">
           <ul>
             <li>
-              <a href="panel.php" class="active"><span class="las la-school"></span>
+              <a class="active"><span class="las la-school"></span>
                 <span>Dashboard</span></a>
             </li>
             <li>
@@ -47,33 +46,24 @@
           </ul>
         </div>
       </div>
-
       <div class="main-content">
          <header>
            <h2>
              <label for="">
                <span class="las la-bars"></span>
              </label>
-
              Dashboard
            </h2>
 
-           <form class="search" action="search.php" method="post" >
-           <div class="search-wrapper">
-           <button type="submit" ><i class="las la-search"></i></button>
-           <input type="text" name="valueToSearch" placeholder="Search Here"required/></br>
-            </div>
-          </form>
 
            <div class="user-wrapper">
              <img src="https://img.icons8.com/pastel-glyph/64/000000/user-male--v1.png" width="40px" height="40px"/>
-             <div>             
+             <div>
                <span id="Name"></span>
                <small>Student</small>
              </div>
            </div>
          </header>
-
          <main>
             <div class="cards">
               <a href="src/chooseclass.php" style="color:black;"><div class="card-single card-single-1">
@@ -86,12 +76,10 @@
               <a href="index.php" style="color:black;"><div class="card-single card-single-3">
                 <div>
                   <h1>Logout</h1>
-
                 </div>
               </div>
             </a>
             </div>
-
          </main>
       </div>
        <script>
@@ -103,7 +91,6 @@
             var h = new Date().getHours();
             var m = new Date().getMinutes();
             var s = new Date().getSeconds();
-
             hours.innerHTML = h;
             minutes.innerHTML = m;
             seconds.innerHTML = s;

@@ -143,11 +143,11 @@ few seconds.</p>
              <option value="Admin">Admin</option>
              <option value="hod">HOD</option>
              <option value="KG-1 Teacher">KG-1 Teacher</option>
-             <option value="KG-2 Teacher">KG-2 Teacher</option>         
+             <option value="KG-2 Teacher">KG-2 Teacher</option>
              <option value="Student">Student</option>
            </select>
             <input type="text" id="User-name" placeholder="Name" name="AdminName" >
-            <input type="password" placeholder="Password" name="AdminPassword">           
+            <input type="password" placeholder="Password" name="AdminPassword">
             <button type="submit" class="button" name="SignIn" onclick="loginFormSubmit();">Sign In</button>
           </form>
        </div>

@@ -16,25 +16,11 @@
     <div class="sidebar-menu">
       <ul>
         <li>
-          <a href="../panel.php" class="active"><span class="las la-school"></span>
+          <a class="active"><span class="las la-school"></span>
             <span>Dashboard</span></a>
         </li>
         <li>
-              <a href="src/chooseclass.php" class="view"><span class="las la-user-graduate"></span>
-                <span>View Students</span></a>
-            </li>
-            <li>
-              <a href="src/addstudent.php"><span class="las la-graduation-cap"></span>
-                <span>Add Students</span></a>
-            </li>
-            <li>
-              <a href="src/viewteachertable.php" class="view"><span class="las la-user-graduate"></span>
-                <span>View Teachers</span></a>
-            </li>
-            <li>
-              <a href="src/viewteachertable.php" class="view"><span class="las la-user-graduate"></span>
-                <span>View HOD</span></a>
-            </li>
+
         <li>
           <a href="../index.php"><span class="las la-user-minus"></span>
             <span>Logout</span></a>
@@ -71,12 +57,7 @@
          Dashboard
        </h2>
 
-       <form class="search" action="../search.php" method="post" >
-       <div class="search-wrapper">
-       <button type="submit" ><i class="las la-search"></i></button>
-       <input type="text" name="valueToSearch" placeholder="Search Here"required/></br>
-        </div>
-      </form>
+
 
        <div class="user-wrapper">
          <img src="https://img.icons8.com/pastel-glyph/64/000000/user-male--v1.png" width="40px" height="40px"/>
@@ -88,7 +69,7 @@
      </header>
      <main>
        <div class="main-div">
-       <h1 class="student_list">Student List</h1>
+       <h1 class="student_list">HOD DETAILS</h1>
            <table>
              <thead>
                <tr>
@@ -107,7 +88,7 @@
                    {?>
                      <tr>
                          <td><?php echo $res['username']; ?></td>
-                         <td><?php echo $res['name'];?></td>                
+                         <td><?php echo $res['name'];?></td>
                          </tr>
 
                  <?php
