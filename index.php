@@ -9,6 +9,8 @@
    $username = mysqli_real_escape_string($db, $_POST['username']);
    $sql= "select * from roles where userName='".$useradmin."' and password='".$passwordadmin."' and role='".$role."'";
    $query= mysqli_query($conn,$sql);
+   $res=mysqli_fetch_array($query);
+   $id=$res['username'];
    if(mysqli_num_rows($query)==1){
      if($role=='Admin')
      {
@@ -28,11 +30,18 @@
       }
       elseif($role=='Student')
       {
-        header('location: studentpanel.php');
+        if($res['class']=='kg-1'){
+          $_SESSION['username']=$res['username'];
+          header('location: kg-1profile.php');
+        }
+        else($res['class']=='kg-2'){
+          header('location: kg-2profile.php');
+
+        }
       }
    }
    else{
-       echo "wrong input";
+       echo "wrong input"; 
    }
  }
 ?>
