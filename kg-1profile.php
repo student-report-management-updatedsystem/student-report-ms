@@ -1,9 +1,3 @@
-<?php
-	require 'auth.php';
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -15,11 +9,13 @@
   <body>
 
     <?php
-    session_start();
+	include 'auth.php';
+	session_start();
+	$user_id = $GET['AdminName'];
 
 
-  $selectquery =" select * from `kg-1` where student_id = '".$_SESSION['username']."'";
-  $query = mysqli_query($conn,$selectquery);
+  $selectquery =" select * from `kg-1` where student_id = $user_id";
+  $query = mysqli_query($conn, $selectquery);
 
   while($res=mysqli_fetch_array($query))
   {?>

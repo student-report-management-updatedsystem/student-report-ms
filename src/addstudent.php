@@ -299,16 +299,19 @@ if( $class =="kg-1")
 {
     $insertquery="INSERT INTO `kg-1`(`student_id`, `name`, `last_name`,`dob`, `gender`, `parent`, `yoa`,`class`, `grade`,`report`,`file`)
     VALUES ('$stdid', '$fname','$lname','$dob','$gender','$phone','$yoa','$class','$grade','$report','$image_name')";
+    $insertqueryy="INSERT INTO `roles` (`role`, `userName`, `password`, `class`) VALUES ('student', '$fname', '$dob', `KG-1`)";
+
 }
 else {
 
   $insertquery="INSERT INTO `kg-2`(`student_id`, `name`, `last_name`,`dob`, `gender`, `parent`, `yoa`,`class`, `grade`,`report`,`file`)
   VALUES ('$stdid', '$fname','$lname','$dob','$gender','$phone','$yoa','$class','$grade','$report','$image_name')";
+  $insertqueryy="INSERT INTO `roles` (`role`, `userName`, `password`, `class`) VALUES ('student', '$fname', '$dob', `KG-2`)";
+
 }
 
 mysqli_query($conn,$insertquery);
 
-$insertqueryy="INSERT INTO `roles` (`role`, `userName`, `password`) VALUES ('student', '$fname', '$dob')";
 if(mysqli_query($conn,$insertqueryy))
 {
   echo '<script>alert("New student added successfully")</script>';

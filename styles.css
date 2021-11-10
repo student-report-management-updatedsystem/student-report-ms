@@ -93,7 +93,7 @@ span{
 }
 .modal-contents
 {
-  height: 350px;
+  height: 400px;
 	width: 300px;
 	background-color: white;
 	text-align: center;
@@ -144,6 +144,9 @@ input
 		color: #2978b5;
 		border: 2px solid #2978b5;
   }
+}
+form{
+  display: block;
 }
 #about-project{
   padding-left: 8%;

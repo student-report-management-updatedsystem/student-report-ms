@@ -5,8 +5,8 @@
    $useradmin=$_POST['AdminName'];
    $passwordadmin=$_POST['AdminPassword'];
    $role = $_POST['role'];
-   session_start();
-   $username = mysqli_real_escape_string($db, $_POST['username']);
+   $class = $_POST['class'];
+   mysqli_real_escape_string($db, $_POST['AdminName']);
    $sql= "select * from roles where userName='".$useradmin."' and password='".$passwordadmin."' and role='".$role."'";
    $query= mysqli_query($conn,$sql);
    $res=mysqli_fetch_array($query);
@@ -20,24 +20,21 @@
       {
         header('location: hodpanel.php');
       }
-      elseif($role=='KG-1 Teacher')
+      elseif($role=='Teacher' AND $class=='KG-1')
       {
         header('location: kg1teacherpanel.php');
       }
-      elseif($role=='KG-2 Teacher')
+      elseif($role=='Teacher' AND $class=='KG-2')
       {
         header('location: kg2teacherpanel.php');
       }
-      elseif($role=='Student')
+      elseif($role=='Student' AND $class=='KG-1')
       {
-        if($res['class']=='kg-1'){
-          $_SESSION['username']=$res['username'];
-          header('location: kg-1profile.php');
-        }
-        else($res['class']=='kg-2'){
-          header('location: kg-2profile.php');
-
-        }
+        header('location: kg-1profile.php? AdminName = $useradmin');
+      }
+      elseif($role=='Student' AND $class=='KG-2')
+      {
+        header('location: kg-2profile.php');
       }
    }
    else{
@@ -60,8 +57,7 @@
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
-    <script defer src="loginUserName.js"></script>
-
+    <script src="<a href="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" target="_blank" rel="noreferrer noopener">https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js</a>"></script>
   </head>
   <body>
     <section id="homepage">
@@ -138,21 +134,27 @@ few seconds.</p>
          <div class="close">+</div>
           <img class="pic_2" src="images/pic_2.png" alt="">
           <form method="POST">
-            <select name="role" class="form-select" aria-label="Default select example">
-             <option selected>User</option>
+            <select name="role" class="form-select"  aria-label="Default select example">
+             <option selected disabled="disabled">User</option>
              <option value="Admin">Admin</option>
              <option value="hod">HOD</option>
-             <option value="KG-1 Teacher">KG-1 Teacher</option>
-             <option value="KG-2 Teacher">KG-2 Teacher</option>
+             <option value="Teacher">Teacher</option>
              <option value="Student">Student</option>
-           </select>
+            </select>
+            <div id="another-field">
+              <select  name="class" name="" id="class-field" class="form-select" aria-label="Default select example">
+                <option value="Choose Class" Selected Disabled>Choose Class</option>
+               <option value="KG-1" >KG-1</option>
+               <option value="KG-2" >KG-2</option>
+              </select>
+            </div>
             <input type="text" id="User-name" placeholder="Name" name="AdminName" >
             <input type="password" placeholder="Password" name="AdminPassword">
-            <button type="submit" class="button" name="SignIn" onclick="loginFormSubmit();">Sign In</button>
+            <button type="submit" class="button" name="SignIn" >Sign In</button>          
           </form>
        </div>
      </div>
-     <script>
+    <script type="text/javascript">
        document.getElementById('button').addEventListener("click", function(){
          document.querySelector('.bg-modal').style.display = "flex";
        });
@@ -160,13 +162,8 @@ few seconds.</p>
          document.querySelector('.bg-modal').style.display = "none";
        });
      </script>
-     <script>
-       function loginFormSubmit()
-       {
-         var username=document.getElementById("User-name").value;
-         localStorage.setItem("id", username);
-         return false;
-        }
-     </script>
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<script src="hide-show-fields-form.js"></script>
   </body>
 </html>

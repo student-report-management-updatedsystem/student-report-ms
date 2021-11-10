@@ -84,8 +84,8 @@ CREATE TABLE IF NOT EXISTS `roles` (
 
 INSERT INTO `roles` (`role`, `username`, `password`,`class`) VALUES ('admin', 'admin', '123',NULL);
 INSERT INTO `roles` (`role`, `username`, `password`,`class`) VALUES ('hod', 'Priya Menon', '123',NULL);
-INSERT INTO `roles` (`role`, `username`, `password`,`class`) VALUES ('KG-1 Teacher', 'usha-01', '05-07-1974','kg-1');
-INSERT INTO `roles` (`role`, `username`, `password`,`class`) VALUES ('KG-2 Teacher', 'teena-71', '11-09-1972','kg-2');
-INSERT INTO `roles` (`role`, `username`, `password`,`class`) VALUES ('student', 'AS01-2341', '2018-05-05','kg-1');
-INSERT INTO `roles` (`role`, `username`, `password`,`class`) VALUES ('student', 'AS02-7621', '2017-05-05','kg-2');
+INSERT INTO `roles` (`role`, `username`, `password`,`class`) VALUES ('Teacher', 'usha-01', '05-07-1974','KG-1');
+INSERT INTO `roles` (`role`, `username`, `password`,`class`) VALUES ('Teacher', 'teena-71', '11-09-1972','KG-2');
+INSERT INTO `roles` (`role`, `username`, `password`,`class`) VALUES ('Student', 'AS01-2341', '2018-05-05','KG-1');
+INSERT INTO `roles` (`role`, `username`, `password`,`class`) VALUES ('Student', 'AS02-7621', '2017-05-05','KG-2');
 
