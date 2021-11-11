@@ -1,13 +1,19 @@
 $(document).ready(function () {
 $(".form-select").change(function() {
-    if ($(this).val() == "Student" || $(this).val() == "Teacher") {
+    if ($(this).val() == "Student") {
       $('#another-field').show();
-    } else {
-      $('#another-field').hide();
     }
   });
   $(".form-select").trigger("change");
   });
+  $(document).ready(function () {
+    $(".form-select").change(function() {
+        if ($(this).val() == "Teacher") {
+          $('#another-field').show();
+        }
+      });
+      $(".form-select").trigger("change");
+      });
 
  
     

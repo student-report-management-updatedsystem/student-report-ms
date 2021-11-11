@@ -1,26 +1,24 @@
-<?php
-	require 'auth.php';
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Student</title>
 		<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="../student.css">
+    <link rel="stylesheet" href="student.css">
   </head>
   <body>
 
-<?php
-include('auth.php');
-$username=$_GET['0'];
-$class=$_GET['1'];
+    <?php
+	$conn = mysqli_connect("localhost","root","","miniproject");
+	if(mysqli_connect_error())
+	{
+	  echo "cannot connect";
+	}
+	$username=$_GET['id'];
 
-  $selectquery =" select * from `kg-1` where student_id= $username";
-  $query = mysqli_query($conn,$selectquery);
+
+  $selectquery = "select * from `kg-1` where student_id LIKE '{$username}'";
+  $query = mysqli_query($conn,$selectquery) or die("Error: " . mysqli_error($conn));
 
   while($res=mysqli_fetch_array($query))
   {?>
@@ -71,11 +69,13 @@ $class=$_GET['1'];
 
 					 Dashboard
 				 </h2>
+
+
 				 <div class="user-wrapper">
 					 <img src="https://img.icons8.com/pastel-glyph/64/000000/user-male--v1.png" width="40px" height="40px"/>
 					 <div>
-						 <h4>Arya Anju Anjali Adarsh</h4>
-						 <small>Super Admin</small>
+						 <h4><?php echo $res['name'];?></h4>
+						 <small>Student</small>
 					 </div>
 				 </div>
 			 </header>
@@ -85,7 +85,7 @@ $class=$_GET['1'];
 					 <div class="contain_table">
 						 <table class="main_table">
 							<td>
-								<div class="student_image"><img class="student_img" src="simages/<?php echo $res['file'];?>" /></div>
+								<div class="student_image"><img class="student_img" src="src/simages/<?php echo $res['file'];?>" /></div>
 							</td>
 							<td class="right_table" style="padding-right: 60px;">
 								<div class="table">
