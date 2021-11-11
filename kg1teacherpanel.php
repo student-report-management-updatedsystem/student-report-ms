@@ -76,7 +76,7 @@
 
          <main>
             <div class="cards">
-              <a href="src/chooseclass.php" style="color:black;"><div class="card-single card-single-1">
+              <a href="src/viewstudenttable.php" style="color:black;"><div class="card-single card-single-1">
                 <div>
                   <h1>View</h1>
                   <span style="font-size: 1rem;">Students</span>
