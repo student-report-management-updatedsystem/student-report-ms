@@ -20,7 +20,7 @@
                 <span>Dashboard</span></a>
             </li>
             <li>
-              <a href="src/chooseclass.php" class="view"><span class="las la-user-graduate"></span>
+              <a href="src/hodchooseclass.php" class="view"><span class="las la-user-graduate"></span>
                 <span>View Students</span></a>
             </li>
             <li>
@@ -72,7 +72,7 @@
 
          <main>
             <div class="cards">
-              <a href="src/chooseclass.php" style="color:black;"><div class="card-single card-single-1">
+              <a href="src/hodchooseclass.php" style="color:black;"><div class="card-single card-single-1">
                 <div>
                   <h1>View</h1>
                   <span style="font-size: 1rem;">Students</span>
