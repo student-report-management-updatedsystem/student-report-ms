@@ -20,7 +20,7 @@
                 <span>Dashboard</span></a>
             </li>
             <li>
-              <a href="src/chooseclass.php" class="view"><span class="las la-user-graduate"></span>
+              <a href="src/viewstudenttable.php" class="view"><span class="las la-user-graduate"></span>
                 <span>View Students</span></a>
             </li>
             <li>
