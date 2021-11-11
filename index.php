@@ -6,7 +6,6 @@
    $passwordadmin=$_POST['AdminPassword'];
    $role = $_POST['role'];
    $class = $_POST['class'];
-   mysqli_real_escape_string($db, $_POST['AdminName']) or die("Error: " . mysqli_error($db));
    $sql= "select * from roles where userName='".$useradmin."' and password='".$passwordadmin."' and role='".$role."'";
    $query= mysqli_query($conn,$sql);
    if(mysqli_num_rows($query)==1){
