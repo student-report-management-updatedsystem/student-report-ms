@@ -1,3 +1,9 @@
+<?php
+	require 'auth.php';
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -8,14 +14,13 @@
   </head>
   <body>
 
-    <?php
-	include 'auth.php';
-	session_start();
-	$user_id = $GET['AdminName'];
+<?php
+include('auth.php');
+$username=$_GET['0'];
+$class=$_GET['1'];
 
-
-  $selectquery =" select * from `kg-1` where student_id = $user_id";
-  $query = mysqli_query($conn, $selectquery);
+  $selectquery =" select * from `kg-1` where student_id= $username";
+  $query = mysqli_query($conn,$selectquery);
 
   while($res=mysqli_fetch_array($query))
   {?>
@@ -27,17 +32,10 @@
 			<div class="sidebar-menu">
 				<ul>
 					<li>
-						<a href="../panel.php" class="active"><span class="las la-school"></span>
+						<a class="active"><span class="las la-school"></span>
 							<span>Dashboard</span></a>
 					</li>
-					<li>
-						<a href="chooseclass.php"><span class="las la-user-graduate"></span>
-							<span>View</span></a>
-					</li>
-					<li>
-						<a href="addstudent.php"><span class="las la-graduation-cap"></span>
-							<span>Add</span></a>
-					</li>
+
 					<li>
 						<a href="../index.php"><span class="las la-user-minus"></span>
 							<span>Logout</span></a>
@@ -73,14 +71,6 @@
 
 					 Dashboard
 				 </h2>
-
-				 <form class="search" action="../search.php" method="post" >
-				 <div class="search-wrapper">
-				 <button type="submit" ><i class="las la-search"></i></button>
-				 <input type="text" name="valueToSearch" placeholder="Search Here"required/></br>
-					</div>
-				</form>
-
 				 <div class="user-wrapper">
 					 <img src="https://img.icons8.com/pastel-glyph/64/000000/user-male--v1.png" width="40px" height="40px"/>
 					 <div>

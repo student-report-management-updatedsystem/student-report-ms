@@ -30,11 +30,23 @@
       }
       elseif($role=='Student' AND $class=='KG-1')
       {
-        header('location: kg-1profile.php? AdminName = $useradmin');
+        $query = array(
+          $useradmin,
+          $class
+          );
+
+        $query = http_build_query($query);
+        header("Location: kg-1profile.php?$query");
       }
       elseif($role=='Student' AND $class=='KG-2')
       {
-        header('location: kg-2profile.php');
+        $query = array(
+          $useradmin,
+          $class
+          );
+
+        $query = http_build_query($query);
+        header("Location: kg-1profile.php?username$query");
       }
    }
    else{
