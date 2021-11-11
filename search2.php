@@ -98,7 +98,7 @@ $conn= new mysqli("localhost","root","","miniproject");
       }
 
 
-$res = mysqli_query($conn, "SELECT * FROM `kg-2` WHERE name LIKE '{$name}%' OR last_name LIKE '{$name}%' ORDER BY name ASC");
+$res = mysqli_query($conn, "SELECT * FROM `kg-2` WHERE name LIKE '{$name}%' OR last_name LIKE '{$name}%' OR student_id LIKE '{$name}%' ORDER BY name ASC");
 
 
 while ($row = mysqli_fetch_array($res))
