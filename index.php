@@ -9,8 +9,6 @@
    mysqli_real_escape_string($db, $_POST['AdminName']);
    $sql= "select * from roles where userName='".$useradmin."' and password='".$passwordadmin."' and role='".$role."'";
    $query= mysqli_query($conn,$sql);
-   $res=mysqli_fetch_array($query);
-   $id=$res['username'];
    if(mysqli_num_rows($query)==1){
      if($role=='Admin')
      {
@@ -30,23 +28,20 @@
       }
       elseif($role=='Student' AND $class=='KG-1')
       {
-        $query = array(
-          $useradmin,
-          $class
-          );
+        $selectquery =" select * from `kg-1` where student_id= $useradmin";
+        $query = mysqli_query($conn,$selectquery);
+        $res=mysqli_fetch_array($query);
+        $id=$res['id'];
 
-        $query = http_build_query($query);
-        header("Location: kg-1profile.php?$query");
+        header("Location: student.php?id=$id");
       }
       elseif($role=='Student' AND $class=='KG-2')
       {
-        $query = array(
-          $useradmin,
-          $class
-          );
-
-        $query = http_build_query($query);
-        header("Location: kg-1profile.php?username$query");
+        $sql= "select * from `kg-2` where student_id= $useradmin";
+        $query= mysqli_query($conn,$sql);
+        $res=mysqli_fetch_array($query);
+        $id=$res['id'];
+        header("Location: student.php?id=$id");
       }
    }
    else{
