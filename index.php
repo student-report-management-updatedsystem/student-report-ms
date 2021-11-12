@@ -139,16 +139,16 @@ few seconds.</p>
              <option value="Teacher">Teacher</option>
              <option value="Student">Student</option>
             </select>
-            <div id="another-field">
+            <div style="display: none;" id="another-field">
               <select  name="class" name="" id="class-field" class="form-select" aria-label="Default select example">
                 <option value="Choose Class" Selected Disabled>Choose Class</option>
                <option value="KG-1" >KG-1</option>
                <option value="KG-2" >KG-2</option>
               </select>
-            </div>
+            </div>    
             <input type="text" id="User-name" placeholder="Name" name="AdminName" >
-            <input type="password" placeholder="Password" name="AdminPassword">
-            <button type="submit" class="button" name="SignIn" >Sign In</button>          
+            <input type="password" placeholder="Password" name="AdminPassword">  
+            <button type="submit" class="button" name="SignIn" >Sign In</button>               
           </form>
        </div>
      </div>
