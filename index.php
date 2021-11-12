@@ -15,15 +15,15 @@
      }
       elseif($role=='hod')
       {
-        header('location: hodpanel.php');
+        header("location: hodpanel.php");
       }
       elseif($role=='Teacher' AND $class=='KG-1')
       {
-        header('location: kg1teacherpanel.php');
+        header("location: kg1teacherpanel.php?id=$useradmin");
       }
       elseif($role=='Teacher' AND $class=='KG-2')
       {
-        header('location: kg2teacherpanel.php');
+        header("location: kg2teacherpanel.php?id=$useradmin");
       }
       elseif($role=='Student' AND $class=='KG-1')
       {

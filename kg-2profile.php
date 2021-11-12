@@ -35,7 +35,7 @@
 					</li>
 
 					<li>
-						<a href="../index.php"><span class="las la-user-minus"></span>
+						<a href="index.php"><span class="las la-user-minus"></span>
 							<span>Logout</span></a>
 					</li>
 					<li>

@@ -9,7 +9,6 @@
 
 
 <body>
-
             <div class="sidebar">
               <div class="sidebar-brand">
                 <h2><span class="lab la-accusoft"></span> ABC School</h2>
@@ -60,8 +59,8 @@
     <div class="user-wrapper">
       <img src="https://img.icons8.com/pastel-glyph/64/000000/user-male--v1.png" width="40px" height="40px"/>
       <div>
-        <h4>Arya Anju Anjali Adarsh</h4>
-        <small>Super Admin</small>
+        <h4></h4>
+        <small></small>
       </div>
     </div>
   </header>
