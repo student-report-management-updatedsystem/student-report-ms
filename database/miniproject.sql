@@ -77,7 +77,7 @@ INSERT INTO `HOD` (`id`, `username`, `password`, `name`) VALUES (1, 'mangala-01'
 
 CREATE TABLE IF NOT EXISTS `roles` (
   `role` varchar(45) NOT NULL,
-  `username` varchar(220) NOT NULL,
+  `username` varchar(220) NOT NULL PRIMARY KEY,
   `password` varchar(45) NOT NULL,
   `class` varchar(45)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
